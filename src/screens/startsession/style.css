@@ -1,0 +1,27 @@
+.session-info-container {
+    max-width: 580px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+
+  
+  .section {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    
+  }
+  
+  .section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .section select, .section input[type=date], .section input[type=text] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  
