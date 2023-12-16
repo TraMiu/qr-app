@@ -7,6 +7,7 @@ import SpeakerNotesRoundedIcon from '@mui/icons-material/SpeakerNotesRounded';
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { Box} from "@mui/material";
+import SectionSelection from "../global/SectionSeletion";
 
 // DATA SECTION
 const student = {
@@ -78,7 +79,7 @@ function StudentList() {
         <StudentRow student={student}/>
     );
     return (
-        <Box style={{maxHeight: '100%', overflow: 'auto'}}>
+        <Box style={{maxHeight: '28rem', overflow: 'auto'}}>
 
             {listItems}
         </Box>
@@ -96,11 +97,16 @@ function Total() {
 }
 
 function MarkAll() {
+   
     return (
-        <div className="student-row">
+        <div className="mark-all">
+            
             <h3 style={{marginLeft: '15%', width: '400px'}}>Mark all as: </h3>
-            <ButtonGroup/>
+            <ButtonGroup sx={{marginLeft: "0"}}/>
+          
+            
             <div style={{marginRight: '10%'}}></div>
+            
         </div>
     );
 }
@@ -121,31 +127,32 @@ function SearchBar() {
 }
 
 
-// const AttendanceCheck = () => 
+
   
 // export default function AttendanceCheck() 
 
 const AttendanceCheck = () => {
-    const [selectedCourse, setSelectedCourse] = useState('');
+    const [selectedSection, setSelectedSection] = useState('1');
     const handleCourseChange = (event) => {
         if (event.target.value === "custom") {
           // If the custom option is selected, focus on the custom course input
           document.getElementById('custom-course-input').focus();
         } else {
-          setSelectedCourse(event.target.value);
+          setSelectedSection(event.target.value);
         }
     };
     return (
         
         <Box  className="frame">
             <SearchBar/>
+            
             <MarkAll/>
-            <select value={selectedCourse} onChange={handleCourseChange} >
-            {courses.map(course => (
-                <option key={course} value={course}>{course}</option>
-            ))}
-            </select>
+            <Box sx={{backgroundColor: "#E3EEFA"}}>
+                <SectionSelection selectedSection={selectedSection}/>
+            </Box>
+            
             <Title/>
+            
             <StudentList/>
         </Box>
     );

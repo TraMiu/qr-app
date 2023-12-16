@@ -55,7 +55,16 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: 1px solid #e1e1e1;
+    
+    /* border-bottom: 1px solid #e1e1e1; */
+  }
+
+  .mark-all {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    /* border-bottom: 1px solid #e1e1e1; */
   }
   
   /* Student name and email */
