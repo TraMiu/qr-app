@@ -148,7 +148,7 @@ const AttendanceCheck = () => {
             
             <MarkAll/>
             <Box sx={{backgroundColor: "#E3EEFA"}}>
-                <SectionSelection selectedSection={selectedSection}/>
+                <SectionSelection selectedSection={selectedSection} sections={["1", "2", "3", "4"]}/>
             </Box>
             
             <Title/>

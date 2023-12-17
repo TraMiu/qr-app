@@ -40,7 +40,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SectionSelection({ courses = ["1", "2"], selectedSection = "3"}) {
+export default function SectionSelection({ sections = ["1", "2"], selectedSection = "3"}) {
 
   const [section, setSection] = React.useState(selectedSection);
 
@@ -80,7 +80,7 @@ export default function SectionSelection({ courses = ["1", "2"], selectedSection
           }}
      
         >
-          {courses.map((course, index) => (
+          {sections.map((course, index) => (
             <MenuItem key={index} value={course}>{course}</MenuItem>
           ))}
         </Select>
