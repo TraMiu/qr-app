@@ -1,5 +1,4 @@
 import "./style.css";
-import { colors } from "../../theme";
 import { useState } from 'react';
 import ButtonGroup from "../../components/ButtonGroup";
 import { IconButton } from "@mui/joy";
@@ -7,7 +6,14 @@ import SpeakerNotesRoundedIcon from '@mui/icons-material/SpeakerNotesRounded';
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { Box} from "@mui/material";
-import SectionSelection from "../global/SectionSeletion";
+import dayjs from "dayjs";
+import { useEffect } from "react";
+import axios from "axios";
+
+import SectionPicker from "../global/SectionPicker";
+import QRDatePicker from "../global/QRDatePicker";
+
+
 
 // DATA SECTION
 const student = {
@@ -86,15 +92,7 @@ function StudentList() {
     );
 }
 
-function Total() {
-    return (
-        <div className="total">
-            <h3 style={{marginLeft: '15%', width: '400px'}}>Student Name</h3>
-            <h3>Status</h3>
-            <h3 style={{marginRight: '7%'}}>Note</h3>
-        </div>
-    );
-}
+
 
 function MarkAll() {
    
@@ -116,7 +114,7 @@ function SearchBar() {
         <Box
             display="flex"
             backgroundColor="#154884"
-            borderRadius="3px"
+            borderRadius="0.5rem"
         >
             <InputBase sx={{ ml: 2, flex: 1, color: "#ffffff"}} placeholder="Search student..." />
             <IconButton type="button" sx={{ p: 1, color: "#ffffff"}}>
@@ -125,14 +123,58 @@ function SearchBar() {
         </Box>
     )
 }
-
-
-
   
 // export default function AttendanceCheck() 
 
 const AttendanceCheck = () => {
-    const [selectedSection, setSelectedSection] = useState('1');
+
+    const [sections, setSections] = useState([]);
+    const [selectedSection, setSelectedSection] = useState('');  
+    const [selectedDate, setSelectedDate] = useState(new dayjs());
+
+    useEffect(() => {
+        const fetchSections = async () => {
+            try {
+                const currentDayName = getSelectedDayName();
+                const instructorId = '123'; // Replace with the actual instructor ID
+      
+                const response = await axios.get('http://localhost:3001/availableSections', {
+                    params: {
+                        day: currentDayName,
+                        instructorId: instructorId
+                    }
+                });
+                const data = response.data
+                const availableSections = data.flatMap(data => data.courses);
+     
+                
+                if (availableSections.length > 0) {
+                    setSections(availableSections);
+                    setSelectedSection(availableSections[0]); // Set the first course as the selected section
+                    console.log(selectedSection)
+                } else {
+                    setSections(["No section available"]);
+                    setSelectedSection(""); // Reset or set to a default value
+                }         
+              
+            } catch (error) {
+                console.error('Error fetching data: ', error);
+            }
+        };
+
+        fetchSections();
+    }, [selectedDate]);
+
+
+    function getSelectedDayName() {
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        if (selectedDate instanceof Date) {
+            return days[selectedDate.getDay()];
+        } else {
+            return days[selectedDate.day()]; // or some default value
+        }
+    }
+
     const handleCourseChange = (event) => {
         if (event.target.value === "custom") {
           // If the custom option is selected, focus on the custom course input
@@ -141,14 +183,24 @@ const AttendanceCheck = () => {
           setSelectedSection(event.target.value);
         }
     };
+
+    
+    const handleDateChange = (newDate) => {
+        setSelectedDate(newDate);
+    };
     return (
         
         <Box  className="frame">
             <SearchBar/>
             
             <MarkAll/>
-            <Box sx={{backgroundColor: "#E3EEFA"}}>
-                <SectionSelection selectedSection={selectedSection} sections={["1", "2", "3", "4"]}/>
+            <Box  display="flex" alignItems="center" justifyContent="space-between" sx={{backgroundColor: "#154884", borderRadius: "0.5rem"}}>
+                <Box sx={{width: "50%"}}>
+                    <SectionPicker selectedSection={selectedSection} sections={sections} />
+                </Box>
+                <Box sx={{width: "30%", padding: "0.5rem"}}>
+                    <QRDatePicker onDateChange={handleDateChange}/>
+                </Box>
             </Box>
             
             <Title/>

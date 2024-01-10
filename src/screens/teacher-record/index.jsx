@@ -12,7 +12,7 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 
 import "./style.css";
-import SectionSelection from '../global/SectionSeletion';
+import SectionSelection from '../global/SectionPicker';
 import { isHideMenuKey } from '@mui/x-data-grid/utils/keyboardUtils';
 
 
