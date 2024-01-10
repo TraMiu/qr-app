@@ -4,17 +4,17 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
-import SessionInformation from './screens/startsession/index';
-import Sidebar from './screens/global/Sidebar';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <App /> */}
+      <App />
+      
       {/* <ButtonGroup/> */}
-      <SessionInformation/>
+      {/* <SessionInformation/> */}
+      {/* <ButtonGroup/> */}
+      {/* <AttendanceCheck/> */}
     </BrowserRouter>
   </React.StrictMode>
 );

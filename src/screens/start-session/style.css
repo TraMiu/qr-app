@@ -1,7 +1,7 @@
 .session-info-container {
-    max-width: 580px;
+   
     margin: auto;
-    padding: 20px;
+    width: 50rem;
     border: 1px solid #ccc;
     border-radius: 20px;
   }
