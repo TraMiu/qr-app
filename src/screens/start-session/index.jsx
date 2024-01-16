@@ -24,7 +24,7 @@ const SessionInformation = () => {
             const currentDayName = getSelectedDayName();
             const instructorId = '123'; // Replace with the actual instructor ID
   
-            const response = await axios.get('http://localhost:3001/availableSections', {
+            const response = await axios.get('http://localhost:3002/availableSections', {
                 params: {
                     day: currentDayName,
                     instructorId: instructorId
@@ -54,11 +54,15 @@ const SessionInformation = () => {
 
   
   if (showQRScreen) {
-    return <QRScreen />; // Replace this with the actual QR Screen component you have
+    return <QRScreen selectedSection={selectedSection} selectionDate={selectedDate}/>; // Replace this with the actual QR Screen component you have
   }
 
   const handleDateChange = (newDate) => {
     setSelectedDate(newDate);
+  };
+
+  const handleSectionChange = (newSection) => {
+    setSelectedSection(newSection);
   };
 
   function getSelectedDayName() {
@@ -72,7 +76,7 @@ const SessionInformation = () => {
 
   
   return (
-    <Box sx={{padding: "3rem"}}>
+    <Box sx={{padding: "5.5%"}}>
       <div className="session-info-container">
         <Title text="Session Information"/>
         <Box margin="2rem">
@@ -86,7 +90,7 @@ const SessionInformation = () => {
           </div>
           <div className="section">
             <h3>Course</h3>
-            <SectionPicker sections={sections} selectedSection={selectedSection}/>
+            <SectionPicker sections={sections} selectedSection={selectedSection} onSectionChange={handleSectionChange}/>
                   
           </div>
           <div>
@@ -100,7 +104,10 @@ const SessionInformation = () => {
         justifyContent: 'center' // Center the button horizontally
       }} margin="2rem">
         <Button variant="contained" 
-        sx={{borderRadius: "1rem", backgroundColor: '#C72027'}}
+        sx={{borderRadius: "1rem", backgroundColor: '#C72027', 
+        '&:hover': {
+          backgroundColor: 'rgba(199, 32, 39, 0.8)', // '#C72027' with 60% opacity
+        },}}
         onClick={() => setShowQRScreen(true)}>Start Check In</Button>
       </Box>
     </Box>

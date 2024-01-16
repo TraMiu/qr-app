@@ -1,0 +1,35 @@
+
+    const [sections, setSections] = useState([]);
+    const [sectionId, setSectionId] = useState("");
+    const [selectedSection, setSelectedSection] = useState('');  
+    const [selectedDate, setSelectedDate] = useState(new dayjs());
+    const [studentList, setStudentList] = useState([]);
+
+    useEffect(() => {
+        const fetchStudents = async () => {
+            try {
+                // Update the API call to use query parameters
+                const response = await axios.get('http://localhost:3004/classes/', {
+                    params: { name: selectedSection }
+                });
+                const data = response.data;
+                
+                const newStudentList = data.flatMap(data => data.students);
+              
+                
+                if (newStudentList.length > 0) {
+                    setStudentList(newStudentList);
+                } else {
+                    setStudentList(["No student"])
+                }   
+
+            } catch (error) {
+                console.error('Error fetching students: ', error);
+                setStudentList([]); // In case of error, set student list to empty
+            }
+        };
+    
+        if (selectedSection) {
+            fetchStudents();
+        }
+    }, [selectedSection]);

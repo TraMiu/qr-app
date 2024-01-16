@@ -6,14 +6,14 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { Typography } from '@mui/material';
 
-export default function Title({ text }) {
+export default function Title({ text, fontSize="1.5rem" }) {
 
 
   return (
     <Box display="flex" alignItems="center" justifyContent="center" padding={0.5} 
         sx={{ backgroundColor: '#154884', color: 'primary.contrastText', borderRadius: "1rem"}}
         width={1}>
-        <Typography fontWeight="bold" fontSize="1.5rem">{text}</Typography>
+        <Typography fontWeight="bold" fontSize={fontSize}>{text}</Typography>
     </Box>
 
   );

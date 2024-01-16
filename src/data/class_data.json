@@ -1,0 +1,3526 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "name": "Introduction to Philosophy - Section 1",
+      "students": [
+        {
+          "name": "Quinn Martinez",
+          "email": "quinnmartinez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 1
+        },
+        {
+          "name": "Quinn Moore",
+          "email": "quinnmoore@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 2
+        },
+        {
+          "name": "Reese Thomas",
+          "email": "reesethomas@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 3
+        },
+        {
+          "name": "Avery Taylor",
+          "email": "averytaylor@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 4
+        },
+        {
+          "name": "Cameron Taylor",
+          "email": "camerontaylor@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 5
+        },
+        {
+          "name": "Charlie Wilson",
+          "email": "charliewilson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 6
+        },
+        {
+          "name": "Jamie Smith",
+          "email": "jamiesmith@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 7
+        },
+        {
+          "name": "Addison Martin",
+          "email": "addisonmartin@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 8
+        },
+        {
+          "name": "Peyton Jones",
+          "email": "peytonjones@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 9
+        },
+        {
+          "name": "Robin Davis",
+          "email": "robindavis@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 10
+        },
+        {
+          "name": "Skyler Miller",
+          "email": "skylermiller@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 11
+        },
+        {
+          "name": "Jamie Williams",
+          "email": "jamiewilliams@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 12
+        },
+        {
+          "name": "Reese Lopez",
+          "email": "reeselopez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 13
+        },
+        {
+          "name": "Peyton Williams",
+          "email": "peytonwilliams@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 14
+        },
+        {
+          "name": "Jordan Jackson",
+          "email": "jordanjackson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 15
+        },
+        {
+          "name": "Dakota Gonzalez",
+          "email": "dakotagonzalez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 16
+        },
+        {
+          "name": "Skyler Wilson",
+          "email": "skylerwilson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 17
+        },
+        {
+          "name": "Sawyer Smith",
+          "email": "sawyersmith@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 18
+        },
+        {
+          "name": "Charlie Miller",
+          "email": "charliemiller@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 19
+        },
+        {
+          "name": "Dakota Jackson",
+          "email": "dakotajackson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 20
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Introduction to Philosophy - Section 2",
+      "students": [
+        {
+          "name": "Casey Jones",
+          "email": "caseyjones@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 21
+        },
+        {
+          "name": "Casey Johnson",
+          "email": "caseyjohnson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 22
+        },
+        {
+          "name": "Reese Johnson",
+          "email": "reesejohnson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 23
+        },
+        {
+          "name": "Addison Rodriguez",
+          "email": "addisonrodriguez@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 24
+        },
+        {
+          "name": "Addison Martin",
+          "email": "addisonmartin@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 25
+        },
+        {
+          "name": "Jesse Garcia",
+          "email": "jessegarcia@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 26
+        },
+        {
+          "name": "Morgan Miller",
+          "email": "morganmiller@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 27
+        },
+        {
+          "name": "Skyler Taylor",
+          "email": "skylertaylor@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 28
+        },
+        {
+          "name": "Quinn Thomas",
+          "email": "quinnthomas@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 29
+        },
+        {
+          "name": "Riley Smith",
+          "email": "rileysmith@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 30
+        },
+        {
+          "name": "Riley Hernandez",
+          "email": "rileyhernandez@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 31
+        },
+        {
+          "name": "Dakota Brown",
+          "email": "dakotabrown@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 32
+        },
+        {
+          "name": "Sawyer Smith",
+          "email": "sawyersmith@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 33
+        },
+        {
+          "name": "Elliot Jones",
+          "email": "elliotjones@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 34
+        },
+        {
+          "name": "Robin Miller",
+          "email": "robinmiller@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 35
+        },
+        {
+          "name": "Skyler Miller",
+          "email": "skylermiller@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 36
+        },
+        {
+          "name": "Quinn Wilson",
+          "email": "quinnwilson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 37
+        },
+        {
+          "name": "Taylor Taylor",
+          "email": "taylortaylor@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 38
+        },
+        {
+          "name": "Jordan Jones",
+          "email": "jordanjones@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 39
+        },
+        {
+          "name": "Riley Martinez",
+          "email": "rileymartinez@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 40
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Introduction to Philosophy - Section 3",
+      "students": [
+        {
+          "name": "Jordan Martin",
+          "email": "jordanmartin@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 41
+        },
+        {
+          "name": "Skyler Rodriguez",
+          "email": "skylerrodriguez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 42
+        },
+        {
+          "name": "Cameron Davis",
+          "email": "camerondavis@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 43
+        },
+        {
+          "name": "Dakota Miller",
+          "email": "dakotamiller@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 44
+        },
+        {
+          "name": "Casey Williams",
+          "email": "caseywilliams@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 45
+        },
+        {
+          "name": "Morgan Wilson",
+          "email": "morganwilson@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 46
+        },
+        {
+          "name": "Riley Davis",
+          "email": "rileydavis@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 47
+        },
+        {
+          "name": "Jesse Johnson",
+          "email": "jessejohnson@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 48
+        },
+        {
+          "name": "Alex Gonzalez",
+          "email": "alexgonzalez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 49
+        },
+        {
+          "name": "Jesse Moore",
+          "email": "jessemoore@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 50
+        },
+        {
+          "name": "Jamie Lopez",
+          "email": "jamielopez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 51
+        },
+        {
+          "name": "Quinn Wilson",
+          "email": "quinnwilson@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 52
+        },
+        {
+          "name": "Cameron Moore",
+          "email": "cameronmoore@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 53
+        },
+        {
+          "name": "Taylor Jones",
+          "email": "taylorjones@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 54
+        },
+        {
+          "name": "Casey Lopez",
+          "email": "caseylopez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 55
+        },
+        {
+          "name": "Morgan Smith",
+          "email": "morgansmith@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 56
+        },
+        {
+          "name": "Charlie Miller",
+          "email": "charliemiller@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 57
+        },
+        {
+          "name": "Taylor Garcia",
+          "email": "taylorgarcia@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 58
+        },
+        {
+          "name": "Jamie Rodriguez",
+          "email": "jamierodriguez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 59
+        },
+        {
+          "name": "Sawyer Moore",
+          "email": "sawyermoore@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 60
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Introduction to Socialism - Section 1",
+      "students": [
+        {
+          "name": "Reese Smith",
+          "email": "reesesmith@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 61
+        },
+        {
+          "name": "Peyton Miller",
+          "email": "peytonmiller@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 62
+        },
+        {
+          "name": "Quinn Brown",
+          "email": "quinnbrown@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 63
+        },
+        {
+          "name": "Reese Jackson",
+          "email": "reesejackson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 64
+        },
+        {
+          "name": "Cameron Hernandez",
+          "email": "cameronhernandez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 65
+        },
+        {
+          "name": "Taylor Martin",
+          "email": "taylormartin@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 66
+        },
+        {
+          "name": "Reese Gonzalez",
+          "email": "reesegonzalez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 67
+        },
+        {
+          "name": "Cameron Jones",
+          "email": "cameronjones@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 68
+        },
+        {
+          "name": "Avery Moore",
+          "email": "averymoore@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 69
+        },
+        {
+          "name": "Skyler Martinez",
+          "email": "skylermartinez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 70
+        },
+        {
+          "name": "Casey Moore",
+          "email": "caseymoore@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 71
+        },
+        {
+          "name": "Taylor Anderson",
+          "email": "tayloranderson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 72
+        },
+        {
+          "name": "Alex Gonzalez",
+          "email": "alexgonzalez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 73
+        },
+        {
+          "name": "Riley Anderson",
+          "email": "rileyanderson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 74
+        },
+        {
+          "name": "Avery Wilson",
+          "email": "averywilson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 75
+        },
+        {
+          "name": "Morgan Brown",
+          "email": "morganbrown@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 76
+        },
+        {
+          "name": "Taylor Rodriguez",
+          "email": "taylorrodriguez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 77
+        },
+        {
+          "name": "Elliot Lopez",
+          "email": "elliotlopez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 78
+        },
+        {
+          "name": "Peyton Lopez",
+          "email": "peytonlopez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 79
+        },
+        {
+          "name": "Skyler Williams",
+          "email": "skylerwilliams@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 80
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Introduction to Socialism - Section 2",
+      "students": [
+        {
+          "name": "Quinn Miller",
+          "email": "quinnmiller@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 81
+        },
+        {
+          "name": "Alex Martinez",
+          "email": "alexmartinez@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 82
+        },
+        {
+          "name": "Jordan Smith",
+          "email": "jordansmith@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 83
+        },
+        {
+          "name": "Dakota Martinez",
+          "email": "dakotamartinez@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 84
+        },
+        {
+          "name": "Peyton Wilson",
+          "email": "peytonwilson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 85
+        },
+        {
+          "name": "Addison Williams",
+          "email": "addisonwilliams@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 86
+        },
+        {
+          "name": "Cameron Jackson",
+          "email": "cameronjackson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 87
+        },
+        {
+          "name": "Jordan Gonzalez",
+          "email": "jordangonzalez@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 88
+        },
+        {
+          "name": "Cameron Brown",
+          "email": "cameronbrown@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 89
+        },
+        {
+          "name": "Jesse Rodriguez",
+          "email": "jesserodriguez@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 90
+        },
+        {
+          "name": "Peyton Jones",
+          "email": "peytonjones@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 91
+        },
+        {
+          "name": "Reese Martin",
+          "email": "reesemartin@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 92
+        },
+        {
+          "name": "Dakota Hernandez",
+          "email": "dakotahernandez@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 93
+        },
+        {
+          "name": "Jamie Wilson",
+          "email": "jamiewilson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 94
+        },
+        {
+          "name": "Sawyer Miller",
+          "email": "sawyermiller@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 95
+        },
+        {
+          "name": "Jamie Miller",
+          "email": "jamiemiller@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 96
+        },
+        {
+          "name": "Alex Jones",
+          "email": "alexjones@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 97
+        },
+        {
+          "name": "Taylor Johnson",
+          "email": "taylorjohnson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 98
+        },
+        {
+          "name": "Cameron Martinez",
+          "email": "cameronmartinez@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 99
+        },
+        {
+          "name": "Elliot Miller",
+          "email": "elliotmiller@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 100
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Introduction to Socialism - Section 3",
+      "students": [
+        {
+          "name": "Alex Jackson",
+          "email": "alexjackson@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 101
+        },
+        {
+          "name": "Quinn Lopez",
+          "email": "quinnlopez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 102
+        },
+        {
+          "name": "Alex Brown",
+          "email": "alexbrown@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 103
+        },
+        {
+          "name": "Dakota Jones",
+          "email": "dakotajones@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 104
+        },
+        {
+          "name": "Skyler Gonzalez",
+          "email": "skylergonzalez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 105
+        },
+        {
+          "name": "Quinn Williams",
+          "email": "quinnwilliams@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 106
+        },
+        {
+          "name": "Reese Rodriguez",
+          "email": "reeserodriguez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 107
+        },
+        {
+          "name": "Taylor Jackson",
+          "email": "taylorjackson@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 108
+        },
+        {
+          "name": "Riley Thomas",
+          "email": "rileythomas@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 109
+        },
+        {
+          "name": "Alex Smith",
+          "email": "alexsmith@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 110
+        },
+        {
+          "name": "Cameron Moore",
+          "email": "cameronmoore@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 111
+        },
+        {
+          "name": "Jesse Thomas",
+          "email": "jessethomas@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 112
+        },
+        {
+          "name": "Elliot Martinez",
+          "email": "elliotmartinez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 113
+        },
+        {
+          "name": "Elliot Rodriguez",
+          "email": "elliotrodriguez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 114
+        },
+        {
+          "name": "Taylor Moore",
+          "email": "taylormoore@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 115
+        },
+        {
+          "name": "Riley Smith",
+          "email": "rileysmith@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 116
+        },
+        {
+          "name": "Dakota Smith",
+          "email": "dakotasmith@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 117
+        },
+        {
+          "name": "Casey Wilson",
+          "email": "caseywilson@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 118
+        },
+        {
+          "name": "Jordan Lopez",
+          "email": "jordanlopez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 119
+        },
+        {
+          "name": "Jesse Gonzalez",
+          "email": "jessegonzalez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 120
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Introduction to Financial Accounting - Section 1",
+      "students": [
+        {
+          "name": "Sawyer Garcia",
+          "email": "sawyergarcia@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 121
+        },
+        {
+          "name": "Sawyer Williams",
+          "email": "sawyerwilliams@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 122
+        },
+        {
+          "name": "Skyler Martinez",
+          "email": "skylermartinez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 123
+        },
+        {
+          "name": "Quinn Lopez",
+          "email": "quinnlopez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 124
+        },
+        {
+          "name": "Morgan Anderson",
+          "email": "morgananderson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 125
+        },
+        {
+          "name": "Charlie Gonzalez",
+          "email": "charliegonzalez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 126
+        },
+        {
+          "name": "Cameron Davis",
+          "email": "camerondavis@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 127
+        },
+        {
+          "name": "Sawyer Hernandez",
+          "email": "sawyerhernandez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 128
+        },
+        {
+          "name": "Cameron Wilson",
+          "email": "cameronwilson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 129
+        },
+        {
+          "name": "Taylor Lopez",
+          "email": "taylorlopez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 130
+        },
+        {
+          "name": "Addison Jones",
+          "email": "addisonjones@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 131
+        },
+        {
+          "name": "Skyler Miller",
+          "email": "skylermiller@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 132
+        },
+        {
+          "name": "Cameron Williams",
+          "email": "cameronwilliams@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 133
+        },
+        {
+          "name": "Avery Martinez",
+          "email": "averymartinez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 134
+        },
+        {
+          "name": "Jamie Garcia",
+          "email": "jamiegarcia@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 135
+        },
+        {
+          "name": "Elliot Martin",
+          "email": "elliotmartin@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 136
+        },
+        {
+          "name": "Sawyer Gonzalez",
+          "email": "sawyergonzalez@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 137
+        },
+        {
+          "name": "Riley Moore",
+          "email": "rileymoore@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 138
+        },
+        {
+          "name": "Riley Jones",
+          "email": "rileyjones@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 139
+        },
+        {
+          "name": "Dakota Wilson",
+          "email": "dakotawilson@example.com",
+          "section": 1,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 140
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Introduction to Financial Accounting - Section 2",
+      "students": [
+        {
+          "name": "Morgan Hernandez",
+          "email": "morganhernandez@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 141
+        },
+        {
+          "name": "Riley Garcia",
+          "email": "rileygarcia@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 142
+        },
+        {
+          "name": "Cameron Davis",
+          "email": "camerondavis@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 143
+        },
+        {
+          "name": "Avery Taylor",
+          "email": "averytaylor@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 144
+        },
+        {
+          "name": "Elliot Anderson",
+          "email": "elliotanderson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 145
+        },
+        {
+          "name": "Riley Miller",
+          "email": "rileymiller@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 146
+        },
+        {
+          "name": "Jamie Taylor",
+          "email": "jamietaylor@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 147
+        },
+        {
+          "name": "Jamie Jackson",
+          "email": "jamiejackson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 148
+        },
+        {
+          "name": "Charlie Taylor",
+          "email": "charlietaylor@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 149
+        },
+        {
+          "name": "Riley Smith",
+          "email": "rileysmith@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 150
+        },
+        {
+          "name": "Reese Miller",
+          "email": "reesemiller@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 151
+        },
+        {
+          "name": "Skyler Anderson",
+          "email": "skyleranderson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 152
+        },
+        {
+          "name": "Peyton Davis",
+          "email": "peytondavis@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 153
+        },
+        {
+          "name": "Charlie Garcia",
+          "email": "charliegarcia@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 154
+        },
+        {
+          "name": "Riley Thomas",
+          "email": "rileythomas@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 155
+        },
+        {
+          "name": "Casey Anderson",
+          "email": "caseyanderson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 156
+        },
+        {
+          "name": "Jesse Moore",
+          "email": "jessemoore@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 157
+        },
+        {
+          "name": "Riley Anderson",
+          "email": "rileyanderson@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 158
+        },
+        {
+          "name": "Morgan Davis",
+          "email": "morgandavis@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 159
+        },
+        {
+          "name": "Skyler Miller",
+          "email": "skylermiller@example.com",
+          "section": 2,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 160
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Introduction to Financial Accounting - Section 3",
+      "students": [
+        {
+          "name": "Charlie Taylor",
+          "email": "charlietaylor@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 161
+        },
+        {
+          "name": "Addison Martin",
+          "email": "addisonmartin@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 162
+        },
+        {
+          "name": "Taylor Gonzalez",
+          "email": "taylorgonzalez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 163
+        },
+        {
+          "name": "Jordan Jackson",
+          "email": "jordanjackson@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 164
+        },
+        {
+          "name": "Jamie Brown",
+          "email": "jamiebrown@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 165
+        },
+        {
+          "name": "Skyler Jackson",
+          "email": "skylerjackson@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 166
+        },
+        {
+          "name": "Cameron Smith",
+          "email": "cameronsmith@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 167
+        },
+        {
+          "name": "Jordan Garcia",
+          "email": "jordangarcia@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 168
+        },
+        {
+          "name": "Cameron Davis",
+          "email": "camerondavis@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 169
+        },
+        {
+          "name": "Sawyer Johnson",
+          "email": "sawyerjohnson@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 170
+        },
+        {
+          "name": "Riley Rodriguez",
+          "email": "rileyrodriguez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 171
+        },
+        {
+          "name": "Avery Rodriguez",
+          "email": "averyrodriguez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 172
+        },
+        {
+          "name": "Reese Hernandez",
+          "email": "reesehernandez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 173
+        },
+        {
+          "name": "Cameron Smith",
+          "email": "cameronsmith@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 174
+        },
+        {
+          "name": "Robin Gonzalez",
+          "email": "robingonzalez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 175
+        },
+        {
+          "name": "Morgan Jones",
+          "email": "morganjones@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 176
+        },
+        {
+          "name": "Quinn Garcia",
+          "email": "quinngarcia@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 177
+        },
+        {
+          "name": "Taylor Moore",
+          "email": "taylormoore@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Absent",
+          "id": 178
+        },
+        {
+          "name": "Jamie Gonzalez",
+          "email": "jamiegonzalez@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Present",
+          "id": 179
+        },
+        {
+          "name": "Dakota Miller",
+          "email": "dakotamiller@example.com",
+          "section": 3,
+          "imageUrl": "https://via.placeholder.com/150",
+          "status": "Late",
+          "id": 180
+        }
+      ]
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "565e"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "bda7"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "a2e8"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "1175"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "4f46"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "f0bb"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "9e57"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "bbb4"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "d40f"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "6720"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "ccad"
+    },
+    {
+      "0": {
+        "id": 2,
+        "name": "Introduction to Philosophy - Section 2",
+        "students": [
+          {
+            "name": "Casey Jones",
+            "email": "caseyjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 21
+          },
+          {
+            "name": "Casey Johnson",
+            "email": "caseyjohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 22
+          },
+          {
+            "name": "Reese Johnson",
+            "email": "reesejohnson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 23
+          },
+          {
+            "name": "Addison Rodriguez",
+            "email": "addisonrodriguez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 24
+          },
+          {
+            "name": "Addison Martin",
+            "email": "addisonmartin@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 25
+          },
+          {
+            "name": "Jesse Garcia",
+            "email": "jessegarcia@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 26
+          },
+          {
+            "name": "Morgan Miller",
+            "email": "morganmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 27
+          },
+          {
+            "name": "Skyler Taylor",
+            "email": "skylertaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 28
+          },
+          {
+            "name": "Quinn Thomas",
+            "email": "quinnthomas@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 29
+          },
+          {
+            "name": "Riley Smith",
+            "email": "rileysmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 30
+          },
+          {
+            "name": "Riley Hernandez",
+            "email": "rileyhernandez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 31
+          },
+          {
+            "name": "Dakota Brown",
+            "email": "dakotabrown@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 32
+          },
+          {
+            "name": "Sawyer Smith",
+            "email": "sawyersmith@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 33
+          },
+          {
+            "name": "Elliot Jones",
+            "email": "elliotjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 34
+          },
+          {
+            "name": "Robin Miller",
+            "email": "robinmiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Present",
+            "id": 35
+          },
+          {
+            "name": "Skyler Miller",
+            "email": "skylermiller@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 36
+          },
+          {
+            "name": "Quinn Wilson",
+            "email": "quinnwilson@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 37
+          },
+          {
+            "name": "Taylor Taylor",
+            "email": "taylortaylor@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 38
+          },
+          {
+            "name": "Jordan Jones",
+            "email": "jordanjones@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Absent",
+            "id": 39
+          },
+          {
+            "name": "Riley Martinez",
+            "email": "rileymartinez@example.com",
+            "section": 2,
+            "imageUrl": "https://via.placeholder.com/150",
+            "status": "Late",
+            "id": 40
+          }
+        ]
+      },
+      "id": "a62c"
+    }
+  ]
+}

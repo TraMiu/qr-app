@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SectionPicker({ sections}) {
+export default function SectionPicker({ sections, onSectionChange = {}}) {
 
   const [section, setSection] = React.useState('');
 
@@ -17,6 +17,7 @@ export default function SectionPicker({ sections}) {
   
   const handleChange = (event) => {
     setSection(event.target.value);
+    onSectionChange(event.target.value);
   };
 
 
