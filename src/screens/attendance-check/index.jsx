@@ -15,31 +15,55 @@ import QRDatePicker from "../global/QRDatePicker";
 
 
 
-// DATA SECTION
-const student = {
-    name: 'Hedy Lamarr',
-    email: 'uyenlisadaisy@gmail.com',
-    section: 2,
-    imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-
-};
-const courses = ["Course A", "Course B"];
-const first = {
-    name: 'Cong Chua Bong Bong Bap Bong',
-    email: 'uyenlisadaisy@gmail.com',
-    section: 2,
-    imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-
-};
-
-const studentList = [first];
-for (let i = 0; i < 30; i++) {
-    studentList.push(student)
-} 
-
-// SUBCOMPONENTS
 
 function StudentRow(props) {
+
+    const { student, classId, globalStatus } = props;
+    
+    const [localStatus, setLocalStatus] = useState(student.status);
+
+    // // Use globalStatus if it's set, else use student's individual status
+    // const initialStatus = globalStatus || student.status;
+
+    useEffect(() => {
+        // If globalStatus is set, use it to update localStatus
+        if (globalStatus) {
+            setLocalStatus(globalStatus);
+        }
+    }, [globalStatus, student.status]);
+
+    const handleStatusChange = async (newStatus) => {
+        setLocalStatus(newStatus);
+        try {
+            // Fetch the class data
+            const classResponse = await axios.get(`http://localhost:3004/classes?id=${classId}`);
+            const classData = classResponse.data;
+            const studentList = classData.flatMap(classData => classData.students);
+           
+            console.log(studentList)
+            // Find the student and update the status
+            // Check if students array exists
+            if (classData && Array.isArray(studentList)) {
+                // Find the student and update the status
+                const studentIndex = studentList.findIndex(s => s.id === props.student.id);
+                if (studentIndex !== -1) {
+                    studentList[studentIndex].status = newStatus;
+                    classData.students = studentList;
+
+                    // Update the class data on the server
+                    await axios.post(`http://localhost:3004/classes?id=${classId}`, classData);
+                    console.log('Student status updated successfully');
+                } else {
+                    console.log('Student not found');
+                }
+            } else {
+                console.log('Invalid class data or students not found');
+            }
+        } catch (error) {
+            console.error('Error updating student status:', error);
+        }
+    };
+
     return (
         <div className="student-row">
             <img
@@ -55,7 +79,8 @@ function StudentRow(props) {
                 <h3 className="student-name" >{props.student.name} (Section {props.student.section})</h3>
                 <p className="student-email">{props.student.email}</p>
             </Box>
-            <ButtonGroup/>
+            {/* <ButtonGroup initialStatus={initialStatus} onStatusChange={handleStatusChange}/> */}
+            <ButtonGroup initialStatus={localStatus} onStatusChange={handleStatusChange} />
             <IconButton aria-label="note" size="large" style={{marginRight: '5%'}}>
                 <SpeakerNotesRoundedIcon style={{ fill: '#154884' }}/>
             </IconButton>
@@ -67,7 +92,19 @@ function StudentRow(props) {
 }
 
 
-// MAIN COMPONENTS
+function StudentList({studentList, classId, globalStatus}) {
+    const listItems = studentList.map(student =>
+        <StudentRow key={student.id} student={student} classId={classId} globalStatus={globalStatus} />
+    );
+    return (
+        <Box style={{maxHeight: '28rem', overflow: 'auto'}}>
+
+            {listItems}
+        </Box>
+    );
+}
+
+
 
 function Title() {
     return (
@@ -80,34 +117,36 @@ function Title() {
     );
 }
 
-function StudentList() {
-    const listItems = studentList.map(student =>
-        <StudentRow student={student}/>
-    );
-    return (
-        <Box style={{maxHeight: '28rem', overflow: 'auto'}}>
-
-            {listItems}
-        </Box>
-    );
-}
-
-
-
-function MarkAll() {
+// function MarkAll() {
    
-    return (
-        <div className="mark-all">
+//     return (
+//         <div className="mark-all">
             
-            <h3 style={{marginLeft: '15%', width: '400px'}}>Mark all as: </h3>
-            <ButtonGroup sx={{marginLeft: "0"}}/>
+//             <h3 style={{marginLeft: '15%', width: '400px'}}>Mark all as: </h3>
+//             <ButtonGroup sx={{marginLeft: "0"}}/>
           
             
-            <div style={{marginRight: '10%'}}></div>
+//             <div style={{marginRight: '10%'}}></div>
             
+//         </div>
+//     );
+// }
+
+function MarkAll({ onGlobalStatusChange }) {
+    // Use ButtonGroup here and handle the status change
+    const handleStatusChange = (status) => {
+        onGlobalStatusChange(status);
+    };
+
+    return (
+        <div className="mark-all">
+            <h3 style={{marginLeft: '15%', width: '400px'}}>Mark all as: </h3>
+            <ButtonGroup sx={{marginLeft: "0"}} onStatusChange={handleStatusChange} />
+            <div style={{marginRight: '10%'}}></div>
         </div>
     );
 }
+
 
 function SearchBar() {
     return (
@@ -124,13 +163,19 @@ function SearchBar() {
     )
 }
   
-// export default function AttendanceCheck() 
+
+// MAIN COMPONENTS
 
 const AttendanceCheck = () => {
 
     const [sections, setSections] = useState([]);
+    const [sectionId, setSectionId] = useState("");
     const [selectedSection, setSelectedSection] = useState('');  
     const [selectedDate, setSelectedDate] = useState(new dayjs());
+    const [studentList, setStudentList] = useState([]);
+
+    // In AttendanceCheck component
+    const [globalStatus, setGlobalStatus] = useState(null);
 
     useEffect(() => {
         const fetchSections = async () => {
@@ -138,7 +183,7 @@ const AttendanceCheck = () => {
                 const currentDayName = getSelectedDayName();
                 const instructorId = '123'; // Replace with the actual instructor ID
       
-                const response = await axios.get('http://localhost:3001/availableSections', {
+                const response = await axios.get('http://localhost:3002/availableSections', {
                     params: {
                         day: currentDayName,
                         instructorId: instructorId
@@ -147,7 +192,6 @@ const AttendanceCheck = () => {
                 const data = response.data
                 const availableSections = data.flatMap(data => data.courses);
      
-                
                 if (availableSections.length > 0) {
                     setSections(availableSections);
                     setSelectedSection(availableSections[0]); // Set the first course as the selected section
@@ -165,6 +209,38 @@ const AttendanceCheck = () => {
         fetchSections();
     }, [selectedDate]);
 
+    useEffect(() => {
+        const fetchStudents = async () => {
+            try {
+                // Update the API call to use query parameters
+                const response = await axios.get('http://localhost:3004/classes/', {
+                    params: { name: selectedSection }
+                });
+                const data = response.data;
+                const section = response.data;
+                const newSectionId = section.map(section => section.id);
+                const newStudentList = data.flatMap(data => data.students);
+                setSectionId(newSectionId);
+                console.log("New Id", newSectionId);
+                
+                
+                if (newStudentList.length > 0) {
+                    setStudentList(newStudentList);
+                } else {
+                    setStudentList(["No student"])
+                }   
+
+            } catch (error) {
+                console.error('Error fetching students: ', error);
+                setStudentList([]); // In case of error, set student list to empty
+            }
+        };
+    
+        if (selectedSection) {
+            fetchStudents();
+        }
+    }, [selectedSection]);
+
 
     function getSelectedDayName() {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -175,28 +251,35 @@ const AttendanceCheck = () => {
         }
     }
 
-    const handleCourseChange = (event) => {
-        if (event.target.value === "custom") {
-          // If the custom option is selected, focus on the custom course input
-          document.getElementById('custom-course-input').focus();
-        } else {
-          setSelectedSection(event.target.value);
-        }
+    const handleSectionChange = (newSection) => {
+        setSelectedSection(newSection);
     };
 
-    
     const handleDateChange = (newDate) => {
         setSelectedDate(newDate);
+    };
+
+    // Add a function to update the global status
+    const handleGlobalStatusChange = (status) => {
+        setGlobalStatus(status);
+        console.log(status);
+        // Optionally, update all students' status in the studentList
+        const updatedStudents = studentList.map(student => {
+            return { ...student, status: status };
+        });
+        setStudentList(updatedStudents);
+        console.log(updatedStudents)
+        // Here, you can also make an API call to update all students' statuses in the backend
     };
     return (
         
         <Box  className="frame">
             <SearchBar/>
             
-            <MarkAll/>
+            <MarkAll onGlobalStatusChange={handleGlobalStatusChange} />
             <Box  display="flex" alignItems="center" justifyContent="space-between" sx={{backgroundColor: "#154884", borderRadius: "0.5rem"}}>
                 <Box sx={{width: "50%"}}>
-                    <SectionPicker selectedSection={selectedSection} sections={sections} />
+                    <SectionPicker sections={sections} selectedSection={selectedSection} onSectionChange={handleSectionChange}/>
                 </Box>
                 <Box sx={{width: "30%", padding: "0.5rem"}}>
                     <QRDatePicker onDateChange={handleDateChange}/>
@@ -204,8 +287,7 @@ const AttendanceCheck = () => {
             </Box>
             
             <Title/>
-            
-            <StudentList/>
+            <StudentList studentList={studentList} selectedSection={selectedSection} classId={sectionId} globalStatus={globalStatus}/>
         </Box>
     );
 }

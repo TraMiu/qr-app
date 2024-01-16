@@ -1,0 +1,86 @@
+{
+    "classStatuses": [
+        {
+            "name": "Introduction to Philosophy - Section 2",
+            "students": [
+                {
+                    "name": "Hedy Lamarr",
+                    "email": "uyenlisadaisy@gmail.com",
+                    "section": 2,
+                    "imageUrl": "https://i.imgur.com/yXOvdOSs.jpg",
+                    "status": "Present"
+                },
+                {
+                    "name": "Hedy Lamarr",
+                    "email": "uyenlisadaisy@gmail.com",
+                    "section": 2,
+                    "imageUrl": "https://i.imgur.com/yXOvdOSs.jpg",
+                    "status": "Late"
+                },
+                {
+                    "name": "Hedy Lamarr",
+                    "email": "uyenlisadaisy@gmail.com",
+                    "section": 2,
+                    "imageUrl": "https://i.imgur.com/yXOvdOSs.jpg",
+                    "status": "Absent"
+                }
+            ]
+        },
+        {
+            "name": "Introduction to Socialism - Section 1",
+            "students": [
+                {
+                    "name": "Hedy Lamarr",
+                    "email": "uyenlisadaisy@gmail.com",
+                    "section": 2,
+                    "imageUrl": "https://i.imgur.com/yXOvdOSs.jpg",
+                    "status": "Present"
+                },
+                {
+                    "name": "Hedy Lamarr",
+                    "email": "uyenlisadaisy@gmail.com",
+                    "section": 2,
+                    "imageUrl": "https://i.imgur.com/yXOvdOSs.jpg",
+                    "status": "Present"
+                }
+            ]
+        },
+        {
+            "name": "Introduction to Financial Accounting - Section 3",
+            "students": [
+                {
+                    "name": "Hedy Lamarr",
+                    "email": "uyenlisadaisy@gmail.com",
+                    "section": 2,
+                    "imageUrl": "https://i.imgur.com/yXOvdOSs.jpg",
+                    "status": "Present"
+                },
+                {
+                    "name": "Hedy Lamarr",
+                    "email": "uyenlisadaisy@gmail.com",
+                    "section": 2,
+                    "imageUrl": "https://i.imgur.com/yXOvdOSs.jpg",
+                    "status": "Present"
+                }
+            ]
+        },
+        {
+            "name": "Introduction to Financial Accounting - Section 2",
+            "students": []
+        },
+        {
+            "name": "Introduction to Financial Accounting - Section 1",
+            "students": []
+        },
+        {
+            "name": "Introduction to Philosophy - Section 1",
+            "students": []
+        },
+        {
+            "name": "Introduction to Philosophy - Section 3",
+            "students": []
+        }
+
+    ]
+  }
+    

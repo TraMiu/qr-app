@@ -1,24 +1,28 @@
 import { useState } from 'react';
 
 const statuses = [
-  
   { text: "Present", color: '#14ae5c' },
   { text: "Late", color: '#FFC13C' },
   { text: "Absent" , color: '#C72027' }
 ];
 
-const ButtonGroup = ({ color }) => {
-  const [selected, setSelected] = useState("Present");
+const ButtonGroup = ({ initialStatus, onStatusChange } ) => {
+  const [selected, setSelected] = useState(initialStatus);
 
   const buttons = ['Present', 'Late', 'Absent'];
   const buttonWidth = 100;
+
+  const handleButtonClick = (status) => {
+    setSelected(status);
+    onStatusChange(status);
+  };
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       {buttons.map((button, idx) => (
         <button
           key={idx}
-          onClick={() => setSelected(button)}
+          onClick={() => handleButtonClick(button)}
           style={{
             color: selected === button ? '#FFFFFF' : statuses[idx].color,
             backgroundColor: selected === button ? statuses[idx].color : 'transparent',
