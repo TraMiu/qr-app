@@ -1,25 +1,25 @@
-
-
-
-import React from 'react';
-import { Box, Button, Typography, Paper } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Box, Button, Typography, Paper, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from '@mui/material';
 import Title from '../global/Title';
 import SessionInformation from '../start-session';
-import { useState, useEffect } from 'react';
 import axios from 'axios';
+import "C:/Users/hi/Downloads/qr-app-frontend/qr-app-frontend/src/screens/qr-checkin/test1.css"
 
-const QRScreen = ({selectedSection, selectionDate}) => {
-  const DEFAULT_TIME_LEFT = 5;
+
+const QRScreen = ({ selectedSection, selectionDate }) => {
   const DEFAULT_REFRESH_TIME = 3;
   const [showSessionInformation, setShowSessionInformation] = useState(false);
-
-  const [timeLeft, setTimeLeft] = useState(DEFAULT_TIME_LEFT * 60); 
+  const [openDialog, setOpenDialog] = useState(true); // State to control the dialog
+  const [minutesInput, setMinutesInput] = useState(''); // State to store minutes input
+  const [secondsInput, setSecondsInput] = useState(''); // State to store seconds input
+  const [timeLeft, setTimeLeft] = useState(0); // Initialize with 0
   const [refreshTime, setRefreshTime] = useState(DEFAULT_REFRESH_TIME * 1000)
-  const [imageUrl, setImageUrl] = useState('https://i.imgur.com/yXOvdOSs.jpg'); // Initial image URL
+  const [imageUrl, setImageUrl] = useState('https://i.imgur.com/yXOvdOSs.jpg');
+  const [inputError, setInputError] = useState('');
 
   useEffect(() => {
     // exit early when we reach 0
-    if (!timeLeft) return;
+    if (timeLeft <= 0) return;
 
     // save intervalId to clear the interval when the component re-renders
     const intervalId = setInterval(() => {
@@ -68,7 +68,15 @@ const QRScreen = ({selectedSection, selectionDate}) => {
     return () => clearInterval(intervalId);
   }, [timeLeft]);
 
+  const handleDialogOpen = () => {
+    setOpenDialog(true);
+  };
 
+  const handleDialogClose = () => {
+    setOpenDialog(false);
+    const totalSeconds = (parseInt(minutesInput) || 0) * 60 + (parseInt(secondsInput) || 0);
+    setTimeLeft(totalSeconds); // Set the total time in seconds
+};
 
   
 
@@ -83,6 +91,38 @@ const QRScreen = ({selectedSection, selectionDate}) => {
   return (
     <Box className="qr-screen-container" sx={{ padding: "6%", display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
       {/* Horizontal container for QR code and instructions */}
+      <Dialog open={openDialog} onClose={handleDialogClose} className="custom-dialog" disableEscapeKeyDown={true} >
+  <DialogTitle className="custom-dialog-title">Set Timer</DialogTitle>
+  <DialogContent className="custom-dialog-content">
+    <DialogContentText>
+      Please enter the timer.
+    </DialogContentText>
+    <TextField
+      autoFocus
+      margin="dense"
+      id="minutes"
+      label="Minutes"
+      type="number"
+      variant="outlined"
+      onChange={(e) => setMinutesInput(e.target.value)}
+      className="custom-text-field"
+    />
+    <TextField
+      margin="dense"
+      id="seconds"
+      label="Seconds"
+      type="number"
+      variant="outlined"
+      onChange={(e) => setSecondsInput(e.target.value)}
+      className="custom-text-field"
+    />
+  </DialogContent>
+  <DialogActions className="custom-dialog-actions">
+    <Button onClick={handleDialogClose} className="custom-start-button">Start</Button>
+  </DialogActions>
+</Dialog>
+
+
       <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: '2rem', marginBottom: '2rem' }}>
         
         {/* QR code container */}

@@ -117,21 +117,6 @@ function Title() {
     );
 }
 
-// function MarkAll() {
-   
-//     return (
-//         <div className="mark-all">
-            
-//             <h3 style={{marginLeft: '15%', width: '400px'}}>Mark all as: </h3>
-//             <ButtonGroup sx={{marginLeft: "0"}}/>
-          
-            
-//             <div style={{marginRight: '10%'}}></div>
-            
-//         </div>
-//     );
-// }
-
 function MarkAll({ onGlobalStatusChange }) {
     // Use ButtonGroup here and handle the status change
     const handleStatusChange = (status) => {
@@ -148,19 +133,23 @@ function MarkAll({ onGlobalStatusChange }) {
 }
 
 
-function SearchBar() {
+function SearchBar({ onSearchInputChange }) {
     return (
         <Box
             display="flex"
             backgroundColor="#154884"
             borderRadius="0.5rem"
         >
-            <InputBase sx={{ ml: 2, flex: 1, color: "#ffffff"}} placeholder="Search student..." />
+            <InputBase
+                sx={{ ml: 2, flex: 1, color: "#ffffff"}}
+                placeholder="Search student..."
+                onChange={(event) => onSearchInputChange(event.target.value)}
+            />
             <IconButton type="button" sx={{ p: 1, color: "#ffffff"}}>
-            <SearchIcon />
+                <SearchIcon />
             </IconButton>
         </Box>
-    )
+    );
 }
   
 
@@ -173,7 +162,7 @@ const AttendanceCheck = () => {
     const [selectedSection, setSelectedSection] = useState('');  
     const [selectedDate, setSelectedDate] = useState(new dayjs());
     const [studentList, setStudentList] = useState([]);
-
+    const [searchTerm, setSearchTerm] = useState('');
     // In AttendanceCheck component
     const [globalStatus, setGlobalStatus] = useState(null);
 
@@ -259,6 +248,15 @@ const AttendanceCheck = () => {
         setSelectedDate(newDate);
     };
 
+    const handleSearchInputChange = (newSearchTerm) => {
+        setSearchTerm(newSearchTerm.toLowerCase());
+    };
+    const filteredStudentList = searchTerm
+        ? studentList.filter(student =>
+            student.name.toLowerCase().includes(searchTerm)
+          )
+        : studentList;
+        
     // Add a function to update the global status
     const handleGlobalStatusChange = (status) => {
         setGlobalStatus(status);
@@ -274,7 +272,7 @@ const AttendanceCheck = () => {
     return (
         
         <Box  className="frame">
-            <SearchBar/>
+            <SearchBar onSearchInputChange={handleSearchInputChange}/>
             
             <MarkAll onGlobalStatusChange={handleGlobalStatusChange} />
             <Box  display="flex" alignItems="center" justifyContent="space-between" sx={{backgroundColor: "#154884", borderRadius: "0.5rem"}}>
@@ -287,7 +285,12 @@ const AttendanceCheck = () => {
             </Box>
             
             <Title/>
-            <StudentList studentList={studentList} selectedSection={selectedSection} classId={sectionId} globalStatus={globalStatus}/>
+            <StudentList
+                studentList={filteredStudentList}
+                selectedSection={selectedSection}
+                classId={sectionId}
+                globalStatus={globalStatus}
+            />
         </Box>
     );
 }
