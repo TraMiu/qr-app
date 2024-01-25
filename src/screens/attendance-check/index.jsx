@@ -34,35 +34,37 @@ function StudentRow(props) {
 
     const handleStatusChange = async (newStatus) => {
         setLocalStatus(newStatus);
+    
         try {
             // Fetch the class data
             const classResponse = await axios.get(`http://localhost:3004/classes?id=${classId}`);
-            const classData = classResponse.data;
-            const studentList = classData.flatMap(classData => classData.students);
-           
-            console.log(studentList)
-            // Find the student and update the status
-            // Check if students array exists
-            if (classData && Array.isArray(studentList)) {
+            const classData = classResponse.data[0]; // Assuming there is only one class with the specified ID
+    
+            console.log(classData);
+    
+            // Check if classData exists
+            if (classData) {
                 // Find the student and update the status
-                const studentIndex = studentList.findIndex(s => s.id === props.student.id);
+                const studentIndex = classData.students.findIndex(s => s.id === props.student.id);
+    
                 if (studentIndex !== -1) {
-                    studentList[studentIndex].status = newStatus;
-                    classData.students = studentList;
-
-                    // Update the class data on the server
-                    await axios.post(`http://localhost:3004/classes?id=${classId}`, classData);
+                    classData.students[studentIndex].status = newStatus;
+    
+                    // Update the class data on the server using PUT
+                    await axios.put(`http://localhost:3004/classes/${classId}`, classData);
+    
                     console.log('Student status updated successfully');
                 } else {
                     console.log('Student not found');
                 }
             } else {
-                console.log('Invalid class data or students not found');
+                console.log('Invalid class data');
             }
         } catch (error) {
             console.error('Error updating student status:', error);
         }
     };
+    
 
     return (
         <div className="student-row">
@@ -117,20 +119,25 @@ function Title() {
     );
 }
 
-function MarkAll({ onGlobalStatusChange }) {
-    // Use ButtonGroup here and handle the status change
-    const handleStatusChange = (status) => {
-        onGlobalStatusChange(status);
-    };
 
+function MarkAll({ onGlobalStatusChange, initialStatus }) {
+    // Use ButtonGroup here and handle the status change
+    const [globalStatus, setGlobalStatus] = useState(initialStatus);
+  
+    const handleStatusChange = (status) => {
+      setGlobalStatus(status);
+      onGlobalStatusChange(status);
+    };
+  
     return (
-        <div className="mark-all">
-            <h3 style={{marginLeft: '15%', width: '400px'}}>Mark all as: </h3>
-            <ButtonGroup sx={{marginLeft: "0"}} onStatusChange={handleStatusChange} />
-            <div style={{marginRight: '10%'}}></div>
-        </div>
+      <div className="mark-all">
+        <h3 style={{ marginLeft: '15%', width: '400px' }}>Mark all as: </h3>
+        <ButtonGroup initialStatus={globalStatus} onStatusChange={handleStatusChange} />
+        <div style={{ marginRight: '10%' }}></div>
+      </div>
     );
-}
+  }
+
 
 
 function SearchBar({ onSearchInputChange }) {
@@ -274,7 +281,7 @@ const AttendanceCheck = () => {
         <Box  className="frame">
             <SearchBar onSearchInputChange={handleSearchInputChange}/>
             
-            <MarkAll onGlobalStatusChange={handleGlobalStatusChange} />
+            <MarkAll onGlobalStatusChange={handleGlobalStatusChange}  />
             <Box  display="flex" alignItems="center" justifyContent="space-between" sx={{backgroundColor: "#154884", borderRadius: "0.5rem"}}>
                 <Box sx={{width: "50%"}}>
                     <SectionPicker sections={sections} selectedSection={selectedSection} onSectionChange={handleSectionChange}/>

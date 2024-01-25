@@ -89,7 +89,7 @@ const SessionInformation = () => {
             </ul>
           </div>
           <div className="section">
-            <h3>Course</h3>
+            <h3>Section</h3>
             <SectionPicker sections={sections} selectedSection={selectedSection} onSectionChange={handleSectionChange}/>
                   
           </div>
