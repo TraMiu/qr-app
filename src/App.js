@@ -16,25 +16,26 @@ import StudentRecords from "./screens/student-records";
 
 
 function App() {
-  return (    
-      <>
-        <CssBaseline/>
-        <div className="app">
-          <Sidebar/>
+  
+  const teacherRole = true; 
 
-          <main className="content">
-            {/* <Topbar/> */}
-            <Routes>
-              <Route path="/" element={<SessionInformation/>} />
-              <Route path="/checkin" element={<SessionInformation/>} />
-              <Route path="/edit" element={<AttendanceCheck/>} />
-              <Route path="/records" element={<StudentRecords/>} />
-            </Routes>
-          </main>
-        </div>
-      </>
-      
-    
+  return (
+    <>
+      <CssBaseline />
+      <div className="app">
+        <Sidebar teacher={teacherRole} />
+
+        <main className="content">
+          {/* <Topbar/> */}
+          <Routes>
+            <Route path="/" element={<SessionInformation />} />
+            <Route path="/checkin" element={<SessionInformation />} />
+            <Route path="/edit" element={<AttendanceCheck />} />
+            <Route path="/records" element={<StudentRecords />} />
+          </Routes>
+        </main>
+      </div>
+    </>
   );
 }
 

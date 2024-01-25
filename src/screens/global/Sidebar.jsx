@@ -31,7 +31,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   );
 };
 
-const Sidebar = () => {
+const Sidebar = ({ teacher }) => {
  
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
@@ -103,43 +103,47 @@ const Sidebar = () => {
             paddingLeft={isCollapsed ? undefined : "15%"}
             mb="5px"          
           >
+            {teacher && (
+              <>
+                <Item
+                  title="QR Check-in"
+                  to="/checkin"
+                  icon={<QrCode2OutlinedIcon />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+                <Item
+                  title="Edit Attendance"
+                  to="/edit"
+                  icon={<EditNoteOutlinedIcon />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </>
+            )}
 
-            <Item
-              title="QR Check-in"
-              to="/checkin"
-              icon={<QrCode2OutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Edit Attendance"
-              to="/edit"
-              icon={<EditNoteOutlinedIcon/>}
-              selected={selected}
-              setSelected={setSelected}
-              
-            />
+            {!teacher && (
+              <>
+                <Item
+                  title="Records"
+                  to="/records"
+                  icon={<ContentPasteSearchOutlinedIcon />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+                <Item
+                  title="Settings"
+                  to="/settings"
+                  icon={<SettingsOutlinedIcon />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </>
+            )}
+            
             
           </Box>
-          <Box paddingLeft={isCollapsed ? "0%" : "5%"} >
-          <Item
-              title="Records"
-              to="/records"
-              icon={<ContentPasteSearchOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-
-            <Item
-              title="Settings"
-              to="/settings"
-              icon={<SettingsOutlinedIcon/>}
-              selected={selected}
-              setSelected={setSelected}
-              
-              
-            />
-          </Box>
+          
 
           <Box paddingLeft={isCollapsed ? "0%" : "17%"}  mt={isCollapsed ? "0%" : "50%"}>
             <Item
