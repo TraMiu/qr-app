@@ -3,7 +3,7 @@ import { Box, Button, Typography, Paper, Dialog, DialogActions, DialogContent, D
 import Title from '../global/Title';
 import SessionInformation from '../start-session';
 import axios from 'axios';
-import "C:/Users/hi/Downloads/qr-app-frontend/qr-app-frontend/src/screens/qr-checkin/test1.css"
+import "../qr-checkin/test1.css"
 
 
 const QRScreen = ({ selectedSection, selectionDate }) => {
