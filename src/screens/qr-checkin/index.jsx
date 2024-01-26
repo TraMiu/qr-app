@@ -6,7 +6,7 @@ import axios from 'axios';
 import "../qr-checkin/test1.css"
 
 
-const QRScreen = ({ selectedSection}) => {
+const QRScreen = ({ selectedSection }) => {
   const GET_QR_API = 'http://localhost:3003/qrsessions'
   const DEFAULT_REFRESH_TIME = 5;
   const [showSessionInformation, setShowSessionInformation] = useState(false);
@@ -14,8 +14,8 @@ const QRScreen = ({ selectedSection}) => {
   const [minutesInput, setMinutesInput] = useState(''); // State to store minutes input
   const [secondsInput, setSecondsInput] = useState(''); // State to store seconds input
   const [timeLeft, setTimeLeft] = useState(0); // Initialize with 0
-  const [refreshTime, setRefreshTime] = useState(DEFAULT_REFRESH_TIME * 1000)
-  const [imageUrl, setImageUrl] = useState('https://i.imgur.com/yXOvdOSs.jpg');
+  const refreshTime = DEFAULT_REFRESH_TIME * 1000;
+  const [imageUrl, setImageUrl] = useState('../../assets/vinunilogo.png');
   
 
   const getDateString = () => {
@@ -40,44 +40,25 @@ const QRScreen = ({ selectedSection}) => {
   }, [timeLeft]);
 
   useEffect(() => {
-    if (timeLeft <= 0) {
-      // When timeLeft is 0 or less, stop fetching new images
-      return;
-    }
-
-    // Function to fetch new image URL
-    const fetchNewImageUrl = async () => {
+    const fetchQR = async () => {
       try {
-        const instructorId = '456';
-        const response = await axios.get(GET_QR_API, {
-          params: {
-              instructorId: instructorId
-          }
-        });
 
-        const data = response.data
-        const timeLeft = data.map(data => data.sessionTime)
-        const refreshTime = data.map(data => data.refreshTime)
-        const newImageUrl = data.map(data => data.imageUrl)
-        console.log(timeLeft)
-        setImageUrl(newImageUrl);
-        setTimeLeft(timeLeft * 60);
-        setRefreshTime(refreshTime * 1000)
+        const response = await axios.get(GET_QR_API);
+        const data = response.data;
+        const newImageUrl = data.flatMap(data => data.imageUrl);
+        console.log("imageUrl", newImageUrl);
+        setImageUrl(newImageUrl);      
       } catch (error) {
-        console.error('Error fetching new image URL:', error);
+        console.error('Error fetching data: ', error);
       }
     };
 
-    // Set up interval to fetch new image URL every 5 seconds
-    const intervalId = setInterval(() => {
-      fetchNewImageUrl();
-    }, refreshTime);
+    // Call the function every 5 seconds
+    const intervalId = setInterval(fetchQR, refreshTime);
 
-    // Clear interval on cleanup
+    // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
-  }, [timeLeft]);
-
-
+  }, []);
 
   const handleDialogOpen = () => {
     setOpenDialog(true);
@@ -92,7 +73,7 @@ const QRScreen = ({ selectedSection}) => {
   // Convert time for display
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
-
+  
   if (showSessionInformation) {
     return <SessionInformation />;
   }
@@ -137,7 +118,7 @@ const QRScreen = ({ selectedSection}) => {
         {/* QR code container */}
         <Box className="qr-code-container" sx={{ flexBasis: '60%', marginRight: "5%", borderRadius: '1rem', boxShadow: 3}}>
           <Title text="QR ATTENDANCE CODE" />
-          <img src={timeLeft === 0 ? imageUrl : 'https://i.imgur.com/yXOvdOSs.jpg'} alt="QR Attendance Code" style={{ width: '90%', margin: '5%', opacity: timeLeft === 0 ? '0.3' : '1',}} />
+          <img src={timeLeft === 0 ? '../../assets/vinunilogo.png' : imageUrl} alt="QR Attendance Code" style={{ width: '90%', margin: '5%', opacity: timeLeft === 0 ? '0.3' : '1',}} />
         </Box>
 
         {/* Instructions container */}
