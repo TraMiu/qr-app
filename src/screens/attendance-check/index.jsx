@@ -15,7 +15,6 @@ import QRDatePicker from "../global/QRDatePicker";
 
 
 
-
 function StudentRow(props) {
 
     const { student, classId, globalStatus } = props;
@@ -162,7 +161,7 @@ function SearchBar({ onSearchInputChange }) {
 
 // MAIN COMPONENTS
 
-const AttendanceCheck = () => {
+const AttendanceCheck = ({role, userId, courseId}) => {
 
     const [sections, setSections] = useState([]);
     const [sectionId, setSectionId] = useState("");
@@ -177,12 +176,11 @@ const AttendanceCheck = () => {
         const fetchSections = async () => {
             try {
                 const currentDayName = getSelectedDayName();
-                const instructorId = '123'; // Replace with the actual instructor ID
-      
+
                 const response = await axios.get('http://localhost:3002/availableSections', {
                     params: {
                         day: currentDayName,
-                        instructorId: instructorId
+                        instructorId: userId
                     }
                 });
                 const data = response.data

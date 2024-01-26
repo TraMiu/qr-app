@@ -6,8 +6,9 @@ import axios from 'axios';
 import "../qr-checkin/test1.css"
 
 
-const QRScreen = ({ selectedSection, selectionDate }) => {
-  const DEFAULT_REFRESH_TIME = 3;
+const QRScreen = ({ selectedSection}) => {
+  const GET_QR_API = 'http://localhost:3003/qrsessions'
+  const DEFAULT_REFRESH_TIME = 5;
   const [showSessionInformation, setShowSessionInformation] = useState(false);
   const [openDialog, setOpenDialog] = useState(true); // State to control the dialog
   const [minutesInput, setMinutesInput] = useState(''); // State to store minutes input
@@ -15,7 +16,15 @@ const QRScreen = ({ selectedSection, selectionDate }) => {
   const [timeLeft, setTimeLeft] = useState(0); // Initialize with 0
   const [refreshTime, setRefreshTime] = useState(DEFAULT_REFRESH_TIME * 1000)
   const [imageUrl, setImageUrl] = useState('https://i.imgur.com/yXOvdOSs.jpg');
-  const [inputError, setInputError] = useState('');
+  
+
+  const getDateString = () => {
+    const today = new Date();
+    const day = today.getDate();
+    const month = today.getMonth() + 1; // Months are zero-based, so we add 1
+    const year = today.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
 
   useEffect(() => {
     // exit early when we reach 0
@@ -40,7 +49,7 @@ const QRScreen = ({ selectedSection, selectionDate }) => {
     const fetchNewImageUrl = async () => {
       try {
         const instructorId = '456';
-        const response = await axios.get('http://localhost:3003/qrsessions', {
+        const response = await axios.get(GET_QR_API, {
           params: {
               instructorId: instructorId
           }
@@ -68,6 +77,8 @@ const QRScreen = ({ selectedSection, selectionDate }) => {
     return () => clearInterval(intervalId);
   }, [timeLeft]);
 
+
+
   const handleDialogOpen = () => {
     setOpenDialog(true);
   };
@@ -76,9 +87,7 @@ const QRScreen = ({ selectedSection, selectionDate }) => {
     setOpenDialog(false);
     const totalSeconds = (parseInt(minutesInput) || 0) * 60 + (parseInt(secondsInput) || 0);
     setTimeLeft(totalSeconds); // Set the total time in seconds
-};
-
-  
+  };
 
   // Convert time for display
   const minutes = Math.floor(timeLeft / 60);
@@ -128,7 +137,7 @@ const QRScreen = ({ selectedSection, selectionDate }) => {
         {/* QR code container */}
         <Box className="qr-code-container" sx={{ flexBasis: '60%', marginRight: "5%", borderRadius: '1rem', boxShadow: 3}}>
           <Title text="QR ATTENDANCE CODE" />
-          <img src={timeLeft === 0 ? '../../assets/vinunilogo.png' : 'https://i.imgur.com/yXOvdOSs.jpg'} alt="QR Attendance Code" style={{ width: '90%', margin: '5%', opacity: timeLeft === 0 ? '0.3' : '1',}} />
+          <img src={timeLeft === 0 ? imageUrl : 'https://i.imgur.com/yXOvdOSs.jpg'} alt="QR Attendance Code" style={{ width: '90%', margin: '5%', opacity: timeLeft === 0 ? '0.3' : '1',}} />
         </Box>
 
         {/* Instructions container */}
@@ -138,8 +147,8 @@ const QRScreen = ({ selectedSection, selectionDate }) => {
             <Typography variant="body1" sx={{ marginBottom: '2%' }}>
               <span style={{fontWeight: "bold"}}>Scan the attached QR Code</span> to check your attendance of today class:
             </Typography>
-            <span style={{fontWeight: "bold", variant: "body1"}}>{selectedSection}</span>
-            <div style={{variant: "body1"}}>Date: <span style={{fontWeight: "bold"}}>{selectionDate.format('DD/MM/YYYY')}</span></div>
+            <span style={{fontWeight: "bold", variant: "body1"}}>{selectedSection.section_name}</span>
+            <div style={{variant: "body1"}}>Date: <span style={{fontWeight: "bold"}}>{getDateString()}</span></div>
             <Box sx={{ alignItems: 'center', mt: "2%", alignContent: "center"}}>
             <Typography variant="body1" textAlign="left" sx={{ marginBottom: '4%' }} component="span">
               {timeLeft === 0 ? "Session closed!" : "Session will close after:"}

@@ -120,7 +120,8 @@ function Row({records, index}) {
         <Box justifyContent="center" alignItems="center">
             <Box display="flex" alignItems="center" justifyContent="space-evenly">
                 
-                <Typography variant="h3" component="span" sx={{ color: statusColor, marginRight: "0.5rem"}}>●</Typography>
+                <Typography variant="h3" compon
+                ent="span" sx={{ color: statusColor, marginRight: "0.5rem"}}>●</Typography>
               
                 <Box sx={{width: "20%"}}>
                     <Typography variant="h5">{data.date}</Typography>
@@ -147,6 +148,7 @@ function AttendanceList({attendanceRecords}) {
     const listItems = attendanceRecords.map((date, index) =>
         <Row index={index} records={attendanceRecords} />
     );
+    
     return (
         <Box style={{maxHeight: '28rem', overflow: 'auto', width: "90%"}} marginLeft="5%">
             {listItems}
@@ -155,7 +157,7 @@ function AttendanceList({attendanceRecords}) {
 }
 
 
-export default function StudentRecords() {
+export default function StudentRecords({role, userId, courseId}) {
 
     const [attendanceRecords, setAttendanceRecords] = useState([]);
 
