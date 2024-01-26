@@ -15,9 +15,9 @@ import StudentRecords from "./screens/student-records";
 
 
 
-function App() {
+function App({role, userId, courseId}) {
   
-  const teacherRole = true; 
+  const teacherRole = (role == "teacher"); 
 
   return (
     <>

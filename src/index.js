@@ -6,14 +6,13 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const role = window.APP_DATA.role;
+const userId = window.APP_DATA.userId;
+const courseId = window.APP_DATA.courseId;
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
-      {/* <ButtonGroup/> */}
-      {/* <SessionInformation/> */}
-      {/* <ButtonGroup/> */}
-      {/* <AttendanceCheck/> */}
+      <App role={role} userId={userId} courseId={courseId}/>
     </BrowserRouter>
   </React.StrictMode>
 );
