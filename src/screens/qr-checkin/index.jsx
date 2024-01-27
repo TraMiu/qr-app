@@ -8,6 +8,7 @@ import "../qr-checkin/test1.css"
 
 const QRScreen = ({ selectedSection }) => {
   const GET_QR_API = 'http://localhost:3003/qrsessions'
+  // const GET_QR_API = '/qrsessions'
   const DEFAULT_REFRESH_TIME = 5;
   const [showSessionInformation, setShowSessionInformation] = useState(false);
   const [openDialog, setOpenDialog] = useState(true); // State to control the dialog

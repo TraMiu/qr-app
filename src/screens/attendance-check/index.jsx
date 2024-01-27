@@ -13,8 +13,6 @@ import axios from "axios";
 import SectionPicker from "../global/SectionPicker";
 import QRDatePicker from "../global/QRDatePicker";
 
-
-
 function StudentRow(props) {
 
     const { student, classId, globalStatus } = props;
@@ -85,8 +83,6 @@ function StudentRow(props) {
             <IconButton aria-label="note" size="large" style={{marginRight: '5%'}}>
                 <SpeakerNotesRoundedIcon style={{ fill: '#154884' }}/>
             </IconButton>
-          
-           
            
         </div>
     );
@@ -162,68 +158,128 @@ function SearchBar({ onSearchInputChange }) {
 // MAIN COMPONENTS
 
 const AttendanceCheck = ({role, userId, courseId}) => {
-
-    const [sections, setSections] = useState([]);
-    const [sectionId, setSectionId] = useState("");
+    const GET_SECTION_API = `http://localhost:3002/api` // Delete this when run BE
+  // const GET_SECTION_API = `/api/courses/${courseId}/sections/`  // Uncomment this when run BE
+    const GET_DATE_API_BASE_URL = 'http://localhost:3001' // Delete this when run BE
+    const GET_STATUSES_API_BASE_URL = 'http://localhost:3004'
+    
+    function convertDateFormat(dateStr) {
+        const parts = dateStr.split('-');
+        if (parts.length !== 3) {
+            throw new Error('Invalid date format. Expected DD-MM-YYYY');
+        }
+    
+        const [day, month, year] = parts;
+        return `${year}-${month}-${day}`;
+    }    
+    
+    const [sectionNames, setSectionNames] = useState([]);
+    const [sectionIDs, setSectionIds] = useState([]);
     const [selectedSection, setSelectedSection] = useState('');  
     const [selectedDate, setSelectedDate] = useState(new dayjs());
+
     const [studentList, setStudentList] = useState([]);
+
     const [searchTerm, setSearchTerm] = useState('');
-    // In AttendanceCheck component
+
     const [globalStatus, setGlobalStatus] = useState(null);
 
+    const [className, setClassName] = useState("");
+    
+    function getSectionId(sectionName) {
+        // Assuming sectionIds and sectionNames are accessible within this function
+        const index = sectionNames.indexOf(sectionName);
+        // Check if the sectionName was found
+        if (index !== -1) {
+            return sectionIDs[index];
+        } else {
+            // Return null or some error value if the sectionName is not found
+            return null;
+        }
+    }
+    
+    
     useEffect(() => {
         const fetchSections = async () => {
             try {
-                const currentDayName = getSelectedDayName();
-
-                const response = await axios.get('http://localhost:3002/availableSections', {
-                    params: {
-                        day: currentDayName,
-                        instructorId: userId
-                    }
-                });
+                
+                const response = await axios.get(GET_SECTION_API);
                 const data = response.data
-                const availableSections = data.flatMap(data => data.courses);
-     
+                const className = data.course_name;
+                const availableSections = data.section_list;
+                const sectionNames = availableSections.map(section => section.section_name)
+                const sectionIDs = availableSections.map(section => section.id)
+            
                 if (availableSections.length > 0) {
-                    setSections(availableSections);
-                    setSelectedSection(availableSections[0]); // Set the first course as the selected section
+                    setSectionIds(sectionIDs);
+                    setSectionNames(sectionNames);
+                    setSelectedSection(availableSections[0].section_name); // Set the first course as the selected section
+                    setClassName(className);
                     console.log(selectedSection)
                 } else {
-                    setSections(["No section available"]);
-                    setSelectedSection(""); // Reset or set to a default value
+                   
+                    setSelectedSection("No section available"); // Reset or set to a default value
                 }         
-              
+            
             } catch (error) {
                 console.error('Error fetching data: ', error);
             }
         };
-
         fetchSections();
-    }, [selectedDate]);
+    }, []);
+
+    
+
+    useEffect(() => {
+        const fetchDates = async () => {
+            try {
+                if (selectedSection) {
+
+                    //const GET_DATE_API = `/api/courses/${courseId}/sections/${getSectionId(selectedSection)}/dates`
+                    const GET_DATE_API = `${GET_DATE_API_BASE_URL}/${getSectionId(selectedSection)}`; // replace this this the above when running BE
+                    const response = await axios.get(GET_DATE_API);
+
+                    const data = response.data;
+                    const availableDates = data.dates;
+
+                    if (availableDates.length > 0) {
+                        const date = availableDates[0];
+                        setSelectedDate(dayjs(convertDateFormat(date))); // Assuming convertDateFormat is a function you've defined to format the date
+                    } else {
+                        setSelectedDate(dayjs());
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching data: ', error);
+            }
+        };
+    
+        fetchDates();
+    }, [selectedSection]);
+
+
 
     useEffect(() => {
         const fetchStudents = async () => {
             try {
-                // Update the API call to use query parameters
-                const response = await axios.get('http://localhost:3004/classes/', {
-                    params: { name: selectedSection }
-                });
-                const data = response.data;
-                const section = response.data;
-                const newSectionId = section.map(section => section.id);
-                const newStudentList = data.flatMap(data => data.students);
-                setSectionId(newSectionId);
-                console.log("New Id", newSectionId);
-                
-                
-                if (newStudentList.length > 0) {
-                    setStudentList(newStudentList);
-                } else {
-                    setStudentList(["No student"])
-                }   
 
+                if(selectedSection) {
+                     //const GET_STATUSES_API = `/api/courses/${courseId}/sections/${getSectionId(selectedSection)}`
+                     const GET_STATUSES_API = `${GET_STATUSES_API_BASE_URL}/${getSectionId(selectedSection)}`; // replace this this the above when running BE
+                    
+                     const response = await axios.get(GET_STATUSES_API, {
+                        params: { date: selectedDate.format('DD-MM-YYYY') }
+                    });
+
+                     const data = response.data;
+                     const newStudentList = data.flatMap(data => data.students);
+                      
+                    if (newStudentList.length > 0) {
+                        setStudentList(newStudentList);
+                    } else {
+                        setStudentList([])
+                    }   
+                }              
             } catch (error) {
                 console.error('Error fetching students: ', error);
                 setStudentList([]); // In case of error, set student list to empty
@@ -233,17 +289,8 @@ const AttendanceCheck = ({role, userId, courseId}) => {
         if (selectedSection) {
             fetchStudents();
         }
-    }, [selectedSection]);
+    }, [selectedSection, selectedDate]);
 
-
-    function getSelectedDayName() {
-        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        if (selectedDate instanceof Date) {
-            return days[selectedDate.getDay()];
-        } else {
-            return days[selectedDate.day()]; // or some default value
-        }
-    }
 
     const handleSectionChange = (newSection) => {
         setSelectedSection(newSection);
@@ -274,6 +321,7 @@ const AttendanceCheck = ({role, userId, courseId}) => {
         console.log(updatedStudents)
         // Here, you can also make an API call to update all students' statuses in the backend
     };
+
     return (
         
         <Box  className="frame">
@@ -282,20 +330,23 @@ const AttendanceCheck = ({role, userId, courseId}) => {
             <MarkAll onGlobalStatusChange={handleGlobalStatusChange}  />
             <Box  display="flex" alignItems="center" justifyContent="space-between" sx={{backgroundColor: "#154884", borderRadius: "0.5rem"}}>
                 <Box sx={{width: "50%"}}>
-                    <SectionPicker sections={sections} selectedSection={selectedSection} onSectionChange={handleSectionChange}/>
+                    <SectionPicker sections={sectionNames} selectedSection={selectedSection} onSectionChange={handleSectionChange}/>
                 </Box>
                 <Box sx={{width: "30%", padding: "0.5rem"}}>
-                    <QRDatePicker onDateChange={handleDateChange}/>
+                    <QRDatePicker onDateChange={handleDateChange} selectedDate={selectedDate}/>
                 </Box>
             </Box>
             
-            <Title/>
-            <StudentList
-                studentList={filteredStudentList}
-                selectedSection={selectedSection}
-                classId={sectionId}
-                globalStatus={globalStatus}
-            />
+            <Title/> 
+            
+            {(studentList.length != 0) && (
+                <StudentList
+                    studentList={filteredStudentList}
+                    selectedSection={selectedSection}
+                    classId={courseId}
+                    globalStatus={globalStatus}
+                />
+            )}
         </Box>
     );
 }
