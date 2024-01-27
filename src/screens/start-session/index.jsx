@@ -11,32 +11,33 @@ import dayjs from 'dayjs';
 
 
 
-const SessionInformation = () => {
- 
+const SessionInformation = ({role, userId, courseId}) => {
+  const GET_SECTION_API = `http://localhost:3002/api`
+  // const GET_SECTION_API = `/api/courses/${courseId}/sections/`  // Uncomment this when run BE
+
   const [sections, setSections] = useState([]);
   const [selectedSection, setSelectedSection] = useState('');
   const [showQRScreen, setShowQRScreen] = useState(false); // State to control screen display
-  const [selectedDate, setSelectedDate] = useState(new dayjs());
+  const [className, setClassName] = useState("");
 
   useEffect(() => {
     const fetchSections = async () => {
         try {
-            const currentDayName = getSelectedDayName();
-            const instructorId = '123'; // Replace with the actual instructor ID
-  
-            const response = await axios.get('http://localhost:3002/availableSections', {
-                params: {
-                    day: currentDayName,
-                    instructorId: instructorId
-                }
-            });
+            console.log("UserId", userId);
+            console.log("CourseId", courseId);
+            const response = await axios.get(GET_SECTION_API);
             const data = response.data
-            const availableSections = data.flatMap(data => data.courses);
- 
+            const className = data.course_name;
+            const availableSections = data.section_list;
+            const sectionNames = availableSections.map(section => section.section_name)
             
+            console.log("section IDs", availableSections.map(section => section.id))
+            console.log("data", data);
+            console.log("class_name", className);
             if (availableSections.length > 0) {
-                setSections(availableSections);
+                setSections(sectionNames);
                 setSelectedSection(availableSections[0]); // Set the first course as the selected section
+                setClassName(className);
                 console.log(selectedSection)
             } else {
                 setSections(["No section available"]);
@@ -49,36 +50,31 @@ const SessionInformation = () => {
     };
   
     fetchSections();
-  }, [selectedDate]);
+  }, []);
 
 
   
   if (showQRScreen) {
-    return <QRScreen selectedSection={selectedSection} selectionDate={selectedDate}/>; // Replace this with the actual QR Screen component you have
+    return <QRScreen selectedSection={selectedSection}/>; // Replace this with the actual QR Screen component you have
   }
-
-  const handleDateChange = (newDate) => {
-    setSelectedDate(newDate);
-  };
 
   const handleSectionChange = (newSection) => {
     setSelectedSection(newSection);
   };
 
-  function getSelectedDayName() {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    if (selectedDate instanceof Date) {
-        return days[selectedDate.getDay()];
-    } else {
-        return days[selectedDate.day()]; // or some default value
-    }
+  const getDateString = () => {
+    const today = new Date();
+    const day = today.getDate();
+    const month = today.getMonth() + 1; // Months are zero-based, so we add 1
+    const year = today.getFullYear();
+    return `${day}-${month}-${year}`;
   }
 
   
   return (
     <Box sx={{padding: "5.5%"}}>
       <div className="session-info-container">
-        <Title text="Session Information"/>
+        <Title text="Check-In Session Information"/>
         <Box margin="2rem">
           <div className="section">
             <h3>Check In</h3>
@@ -88,15 +84,18 @@ const SessionInformation = () => {
               <li>Students will have 2 minutes to check-in before the check-in period will automatically close.</li>
             </ul>
           </div>
+          
           <div className="section">
-            <h3>Section</h3>
-            <SectionPicker sections={sections} selectedSection={selectedSection} onSectionChange={handleSectionChange}/>
-                  
-          </div>
-          <div>
-            <h3>Section Date</h3>
-            <QRDatePicker onDateChange={handleDateChange}/>
-          </div>
+            <h2>{className}</h2>
+            
+            <h3>Date: <span className='unbold'>{getDateString()}</span></h3>
+            <Box display="flex" justifyContent="space-between">
+              <h3>Selected Section:</h3>
+              <Box width="70%">
+                <SectionPicker sections={sections} selectedSection={selectedSection} onSectionChange={handleSectionChange}/>
+              </Box>
+            </Box>    
+          </div>    
         </Box>
       </div>
       <Box sx={{

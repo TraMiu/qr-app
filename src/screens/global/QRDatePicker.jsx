@@ -5,13 +5,13 @@ import dayjs from 'dayjs';
 
 
 
-export default function QRDatePicker({ onDateChange = {} }) {
+export default function QRDatePicker({ onDateChange = {}, selectedDate}) {
     return (
       
       <LocalizationProvider dateAdapter={AdapterDayjs} fullWidth="1">
         <DatePicker 
           format="DD-MM-YYYY"
-          defaultValue={dayjs()}
+          value={selectedDate}
           onChange={(newValue) => {
             onDateChange(dayjs(newValue)); // Call the handler with the new date
           }}

@@ -1,23 +1,21 @@
 
 import { CssBaseline} from "@mui/material";
-
 import Sidebar from "./screens/global/Sidebar"
-
-
-import Dashboard from "./screens/dashboard";
 import AttendanceCheck from "./screens/attendance-check";
-import TeacherRecords from "./screens/teacher-record";
 import { Route, Routes } from "react-router-dom";
 import SessionInformation from "./screens/start-session";
-
-import QRCodeComponent from "./screens/qr-checkin";
 import StudentRecords from "./screens/student-records";
+import QRScreen from "./screens/qr-checkin";
 
 
 
 function App({role, userId, courseId}) {
   
-  const teacherRole = (role == "teacher"); 
+  const teacherRole = (role == "Instructor"); 
+  const selectedSectionTest = {
+    "section_name": "Section 1",
+    "id": 1
+  };
 
   return (
     <>
@@ -28,10 +26,11 @@ function App({role, userId, courseId}) {
         <main className="content">
           {/* <Topbar/> */}
           <Routes>
-            <Route path="/" element={<SessionInformation />} />
-            <Route path="/checkin" element={<SessionInformation />} />
-            <Route path="/edit" element={<AttendanceCheck />} />
-            <Route path="/records" element={<StudentRecords />} />
+            <Route path="/" element={teacherRole? <SessionInformation role={role} userId={userId} courseId={courseId}/> : <StudentRecords role={role} userId={userId} courseId={courseId}/>} /> 
+            <Route path="/checkin" element={<SessionInformation role={role} userId={userId} courseId={courseId}/>} />
+            <Route path="/edit" element={<AttendanceCheck role={role} userId={userId} courseId={courseId} />} />
+            <Route path="/records" element={<StudentRecords role={role} userId={userId} courseId={courseId}/>} />
+            <Route path="/qrscreentest" element={<QRScreen selectedSection={selectedSectionTest}/>} />
           </Routes>
         </main>
       </div>
