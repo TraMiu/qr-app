@@ -30,38 +30,38 @@ function StudentRow(props) {
         }
     }, [student.status]);
 
+    useEffect(() => {
+        const updateStatus = async () => {
+                const updatedStatus = {
+                    name: student.name,
+                    email: student.email,
+                    section: student.section,
+                    imageUrl: student.imageUrl,
+                    status: localStatus,
+                    id: student.id
+                };
+
+            // const PUT_STATUS_API = `/api/statuses/${student.id}`
+            const PUT_STATUS_API = "https://jsonplaceholder.typicode.com/posts/1"
+        
+            try {
+                await axios.put(PUT_STATUS_API, updatedStatus);
+                console.log('Student status updated successfully', student.id);
+            } catch (error) {
+                console.error('Error updating student status:', error);
+            }
+        };
+    
+        if (localStatus) {
+            updateStatus()
+        }
+    }, [localStatus]);
+
+    
+
     const handleStatusChange = async (newStatus) => {
         handleButtonClicked();
         setLocalStatus(newStatus);
-    
-        try {
-            // Fetch the class data
-            const classResponse = await axios.get(`http://localhost:3004/classes?id=${classId}`);
-            const classData = classResponse.data[0]; // Assuming there is only one class with the specified ID
-    
-            console.log(classData);
-    
-            // Check if classData exists
-            if (classData) {
-                // Find the student and update the status
-                const studentIndex = classData.students.findIndex(s => s.id === props.student.id);
-    
-                if (studentIndex !== -1) {
-                    classData.students[studentIndex].status = newStatus;
-    
-                    // Update the class data on the server using PUT
-                    await axios.put(`http://localhost:3004/classes/${classId}`, classData);
-    
-                    console.log('Student status updated successfully');
-                } else {
-                    console.log('Student not found');
-                }
-            } else {
-                console.log('Invalid class data');
-            }
-        } catch (error) {
-            console.error('Error updating student status:', error);
-        }
     };
     
 
