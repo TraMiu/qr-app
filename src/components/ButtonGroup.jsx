@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useEffect } from "react";
+
 
 const statuses = [
   { text: "Present", color: '#14ae5c' },
@@ -8,7 +10,6 @@ const statuses = [
 
 const ButtonGroup = ({ initialStatus, onStatusChange } ) => {
   const [selected, setSelected] = useState(initialStatus);
-
   const buttons = ['Present', 'Late', 'Absent'];
   const buttonWidth = 100;
 
@@ -16,6 +17,15 @@ const ButtonGroup = ({ initialStatus, onStatusChange } ) => {
     setSelected(status);
     onStatusChange(status);
   };
+
+  useEffect(() => {
+    // If globalStatus is set, use it to update localStatus
+    if (initialStatus) {
+        setSelected(initialStatus);
+        console.log('Changed status')
+    }
+  }, [initialStatus]);
+
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>

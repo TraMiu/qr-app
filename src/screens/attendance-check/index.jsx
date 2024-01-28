@@ -10,26 +10,28 @@ import dayjs from "dayjs";
 import { useEffect } from "react";
 import axios from "axios";
 
+
 import SectionPicker from "../global/SectionPicker";
 import QRDatePicker from "../global/QRDatePicker";
 
+
 function StudentRow(props) {
 
-    const { student, classId, globalStatus } = props;
-    
+    const {student, classId, handleButtonClicked} = props;
+    console.log("Key ID", student.status)
     const [localStatus, setLocalStatus] = useState(student.status);
 
-    // // Use globalStatus if it's set, else use student's individual status
-    // const initialStatus = globalStatus || student.status;
-
+    // whenever student.status change, update the localStatus
     useEffect(() => {
         // If globalStatus is set, use it to update localStatus
-        if (globalStatus) {
-            setLocalStatus(globalStatus);
+        if (student.status) {
+            setLocalStatus(student.status);
+            console.log('Lobal status', student.status)
         }
-    }, [globalStatus, student.status]);
+    }, [student.status]);
 
     const handleStatusChange = async (newStatus) => {
+        handleButtonClicked();
         setLocalStatus(newStatus);
     
         try {
@@ -89,13 +91,13 @@ function StudentRow(props) {
 }
 
 
-function StudentList({studentList, classId, globalStatus}) {
+function StudentList({studentList, classId, handleButtonClicked}) {
     const listItems = studentList.map(student =>
-        <StudentRow key={student.id} student={student} classId={classId} globalStatus={globalStatus} />
+        <StudentRow key={student.id} student={student} classId={classId} handleButtonClicked={handleButtonClicked} />
     );
+
     return (
         <Box style={{maxHeight: '28rem', overflow: 'auto'}}>
-
             {listItems}
         </Box>
     );
@@ -115,7 +117,7 @@ function Title() {
 }
 
 
-function MarkAll({ onGlobalStatusChange, initialStatus }) {
+function MarkAll({ onGlobalStatusChange, initialStatus}) {
     // Use ButtonGroup here and handle the status change
     const [globalStatus, setGlobalStatus] = useState(initialStatus);
   
@@ -123,6 +125,7 @@ function MarkAll({ onGlobalStatusChange, initialStatus }) {
       setGlobalStatus(status);
       onGlobalStatusChange(status);
     };
+
   
     return (
       <div className="mark-all">
@@ -292,6 +295,7 @@ const AttendanceCheck = ({role, userId, courseId}) => {
     }, [selectedSection, selectedDate]);
 
 
+
     const handleSectionChange = (newSection) => {
         setSelectedSection(newSection);
     };
@@ -308,6 +312,8 @@ const AttendanceCheck = ({role, userId, courseId}) => {
             student.name.toLowerCase().includes(searchTerm)
           )
         : studentList;
+
+    
         
     // Add a function to update the global status
     const handleGlobalStatusChange = (status) => {
@@ -322,12 +328,19 @@ const AttendanceCheck = ({role, userId, courseId}) => {
         // Here, you can also make an API call to update all students' statuses in the backend
     };
 
+
+    // If any individual button clicked, setGlobalStatus to null, do it later
+    const handleButtonClicked = () => {
+        console.log("Some button is clicked")
+    }
+
+
     return (
         
         <Box  className="frame">
             <SearchBar onSearchInputChange={handleSearchInputChange}/>
             
-            <MarkAll onGlobalStatusChange={handleGlobalStatusChange}  />
+            <MarkAll onGlobalStatusChange={handleGlobalStatusChange} initialStatus={globalStatus}/>
             <Box  display="flex" alignItems="center" justifyContent="space-between" sx={{backgroundColor: "#154884", borderRadius: "0.5rem"}}>
                 <Box sx={{width: "50%"}}>
                     <SectionPicker sections={sectionNames} selectedSection={selectedSection} onSectionChange={handleSectionChange}/>
@@ -344,7 +357,7 @@ const AttendanceCheck = ({role, userId, courseId}) => {
                     studentList={filteredStudentList}
                     selectedSection={selectedSection}
                     classId={courseId}
-                    globalStatus={globalStatus}
+                    handleButtonClicked={handleButtonClicked}
                 />
             )}
         </Box>

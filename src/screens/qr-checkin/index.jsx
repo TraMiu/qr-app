@@ -17,6 +17,7 @@ const QRScreen = ({ selectedSection }) => {
   const [timeLeft, setTimeLeft] = useState(0); // Initialize with 0
   const refreshTime = DEFAULT_REFRESH_TIME * 1000;
   const [imageUrl, setImageUrl] = useState('../../assets/vinunilogo.png');
+  const [qrFetchIntervalID, setQrFetchIntervalID] = useState(null);
   
 
   const getDateString = () => {
@@ -26,19 +27,6 @@ const QRScreen = ({ selectedSection }) => {
     const year = today.getFullYear();
     return `${day}/${month}/${year}`;
   }
-
-  useEffect(() => {
-    // exit early when we reach 0
-    if (timeLeft <= 0) return;
-
-    // save intervalId to clear the interval when the component re-renders
-    const intervalId = setInterval(() => {
-      setTimeLeft(timeLeft - 1);
-    }, 1000);
-
-    // clear interval on re-render to avoid memory leaks
-    return () => clearInterval(intervalId);
-  }, [timeLeft]);
 
   useEffect(() => {
     const fetchQR = async () => {
@@ -57,9 +45,28 @@ const QRScreen = ({ selectedSection }) => {
     // Call the function every 5 seconds
     const intervalId = setInterval(fetchQR, refreshTime);
 
+    setQrFetchIntervalID(intervalId);
     // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
+
+  useEffect(() => {
+    // exit early when we reach 0
+    if (timeLeft <= 0) {
+      clearInterval(qrFetchIntervalID);
+      return;
+    }
+
+    // save intervalId to clear the interval when the component re-renders
+    const intervalId = setInterval(() => {
+      setTimeLeft(timeLeft - 1);
+    }, 1000);
+
+    // clear interval on re-render to avoid memory leaks
+    return () => clearInterval(intervalId);
+  }, [timeLeft]);
+
+ 
 
   const handleDialogOpen = () => {
     setOpenDialog(true);
