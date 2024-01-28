@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import SessionInformation from "./screens/start-session";
 import StudentRecords from "./screens/student-records";
 import QRScreen from "./screens/qr-checkin";
+import QRScanScreen from "./screens/qr-scanning";
 
 
 
@@ -31,6 +32,7 @@ function App({role, userId, courseId}) {
             <Route path="/edit" element={<AttendanceCheck role={role} userId={userId} courseId={courseId} />} />
             <Route path="/records" element={<StudentRecords role={role} userId={userId} courseId={courseId}/>} />
             <Route path="/qrscreentest" element={<QRScreen selectedSection={selectedSectionTest}/>} />
+            <Route path="/qrscan" element={<QRScanScreen userId={userId}/>} />
           </Routes>
         </main>
       </div>

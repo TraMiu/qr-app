@@ -23,10 +23,12 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@yudiel/react-qr-scanner": "^1.2.6",
     "axios": "^1.6.5",
     "date-fns": "^2.30.0",
     "dayjs": "^1.11.10",
     "formik": "^2.4.5",
+    "html5-qrcode": "^2.3.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-pro-sidebar": "^0.7.1",
@@ -58,8 +60,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "axios-mock-adapter": "^1.22.0"
   }
 }

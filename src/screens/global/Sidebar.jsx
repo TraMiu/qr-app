@@ -132,8 +132,8 @@ const Sidebar = ({ teacher }) => {
                   setSelected={setSelected}
                 />
                 <Item
-                  title="Settings"
-                  to="/settings"
+                  title="QR Scan"
+                  to="/qrscan"
                   icon={<SettingsOutlinedIcon />}
                   selected={selected}
                   setSelected={setSelected}
