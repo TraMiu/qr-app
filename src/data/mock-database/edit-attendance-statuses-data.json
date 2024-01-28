@@ -18,14 +18,6 @@
           "imageUrl": "https://via.placeholder.com/150",
           "status": "Present",
           "id": 2
-        },
-        {
-          "name": "Reese Thomas",
-          "email": "reesethomas@example.com",
-          "section": 1,
-          "imageUrl": "https://via.placeholder.com/150",
-          "status": "Late",
-          "id": 3
         }
       ]
     },
