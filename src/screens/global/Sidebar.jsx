@@ -145,7 +145,7 @@ const Sidebar = ({ teacher }) => {
           </Box>
           
 
-          <Box paddingLeft={isCollapsed ? "0%" : "17%"}  mt={isCollapsed ? "0%" : "50%"}>
+          {/* <Box paddingLeft={isCollapsed ? "0%" : "17%"}  mt={isCollapsed ? "0%" : "50%"}>
             <Item
                 title="About Us"
                 to="/settings"
@@ -154,7 +154,7 @@ const Sidebar = ({ teacher }) => {
                 setSelected={setSelected}
                 alignSelf="flex-end"
             />
-          </Box>
+          </Box> */}
 
           
           

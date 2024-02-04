@@ -27,7 +27,7 @@ function App({role, userId, courseId}) {
         <main className="content">
           {/* <Topbar/> */}
           <Routes>
-            <Route path="/" element={teacherRole? <SessionInformation role={role} userId={userId} courseId={courseId}/> : <StudentRecords role={role} userId={userId} courseId={courseId}/>} /> 
+            {/* <Route path="/" element={teacherRole? <SessionInformation role={role} userId={userId} courseId={courseId}/> : <StudentRecords role={role} userId={userId} courseId={courseId}/>} />  */}
             <Route path="/checkin" element={<SessionInformation role={role} userId={userId} courseId={courseId}/>} />
             <Route path="/edit" element={<AttendanceCheck role={role} userId={userId} courseId={courseId} />} />
             <Route path="/records" element={<StudentRecords role={role} userId={userId} courseId={courseId}/>} />

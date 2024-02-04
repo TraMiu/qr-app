@@ -7,6 +7,30 @@ import "./style.css";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+function getDayOfWeek(inputDate) {
+    const dateParts = inputDate.split('-');
+    const year = parseInt(dateParts[0], 10);
+    const month = parseInt(dateParts[1], 10) - 1;
+    const day = parseInt(dateParts[2], 10);
+  
+    const date = new Date(year, month, day);
+    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const dayOfWeek = weekdays[date.getDay()];
+  
+    return dayOfWeek;
+}
+function formatDate(inputDate) {
+    const dateParts = inputDate.split('-');
+    const year = parseInt(dateParts[0], 10);
+    const month = parseInt(dateParts[1], 10) - 1; // Month is 0-indexed in JavaScript Date
+    const day = parseInt(dateParts[2], 10);
+  
+    const date = new Date(year, month, day);
+    const formattedDate = `${('0' + day).slice(-2)}/${('0' + (month + 1)).slice(-2)}/${year}`;
+  
+    return formattedDate;
+  }
+
 function sumArrayElements(arr) {
     return arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 }
@@ -124,10 +148,10 @@ function Row({records, index}) {
                 ent="span" sx={{ color: statusColor, marginRight: "0.5rem"}}>●</Typography>
               
                 <Box sx={{width: "20%"}}>
-                    <Typography variant="h5">{data.date}</Typography>
+                    <Typography variant="h5">{formatDate(data.date)}</Typography>
                 </Box>
                 <Box sx={{width: "20%"}}>
-                    <Typography variant="h5">{data.day}</Typography>
+                    <Typography variant="h5">{getDayOfWeek(data.date)}</Typography>
                 </Box>
                 <Box sx={{width: "20%"}}>
                     <Typography variant="h5">{data.status}</Typography>
@@ -145,7 +169,7 @@ function Row({records, index}) {
 
 function AttendanceList({attendanceRecords}) {
 
-    const listItems = attendanceRecords.map((date, index) =>
+    const listItems = attendanceRecords.map((index) =>
         <Row index={index} records={attendanceRecords} />
     );
     
@@ -164,7 +188,7 @@ export default function StudentRecords({role, userId, courseId}) {
     useEffect(() => {
         const fetchRecords = async () => {
             try {
-                const response = await axios.get('http://localhost:3005/attendanceRecords');
+                const response = await axios.get('http://localhost:3005/api');
                 setAttendanceRecords(response.data);
             } catch (error) {
                 console.error('Error fetching data: ', error);
