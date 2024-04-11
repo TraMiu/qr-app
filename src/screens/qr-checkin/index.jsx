@@ -6,7 +6,7 @@ import axios from 'axios';
 import "../qr-checkin/test1.css"
 
 
-const QRScreen = ({ selectedSection }) => {
+const QRScreen = ({ courseName, selectedSection, role, userId, courseId}) => {
   const GET_QR_API = 'http://localhost:3003/qrsessions'
   // const GET_QR_API = '/qrsessions'
   const DEFAULT_REFRESH_TIME = 5;
@@ -14,10 +14,11 @@ const QRScreen = ({ selectedSection }) => {
   const [openDialog, setOpenDialog] = useState(true); // State to control the dialog
   const [minutesInput, setMinutesInput] = useState(''); // State to store minutes input
   const [secondsInput, setSecondsInput] = useState(''); // State to store seconds input
-  const [timeLeft, setTimeLeft] = useState(0); // Initialize with 0
+  const [timeLeft, setTimeLeft] = useState(null); // Initialize with 0
   const refreshTime = DEFAULT_REFRESH_TIME * 1000;
   const [imageUrl, setImageUrl] = useState('../../assets/vinunilogo.png');
   const [qrFetchIntervalID, setQrFetchIntervalID] = useState(null);
+  const [startCountDown, setStartCountDown] = useState(false);
   
 
   const getDateString = () => {
@@ -28,54 +29,57 @@ const QRScreen = ({ selectedSection }) => {
     return `${day}/${month}/${year}`;
   }
 
-  useEffect(() => {
-    const fetchQR = async () => {
-      try {
-
-        const response = await axios.get(GET_QR_API);
-        const data = response.data;
-        const newImageUrl = data.flatMap(data => data.imageUrl);
-        console.log("imageUrl", newImageUrl);
-        setImageUrl(newImageUrl);      
-      } catch (error) {
-        console.error('Error fetching data: ', error);
-      }
-    };
-
-    // Call the function every 5 seconds
-    const intervalId = setInterval(fetchQR, refreshTime);
-
-    setQrFetchIntervalID(intervalId);
-    // Clean up the interval on component unmount
-    return () => clearInterval(intervalId);
-  }, []);
+  const fetchQR = async () => {
+    try {
+      const response = await axios.get(GET_QR_API);
+      const data = response.data;
+      const newImageUrl = data.flatMap(data => data.imageUrl);
+      console.log("imageUrl", newImageUrl);
+      setImageUrl(newImageUrl);      
+    } catch (error) {
+      console.error('Error fetching data: ', error);
+    }
+  };
 
   useEffect(() => {
-    // exit early when we reach 0
-    if (timeLeft <= 0) {
+    let intervalId;
+    if(startCountDown){
+      console.log("start fetching", startCountDown)
+      intervalId = setInterval(fetchQR, refreshTime);
+      setQrFetchIntervalID(intervalId);
+    }
+
+    return () => {
+      clearInterval(intervalId);
+    }
+  }, [startCountDown]);
+
+  useEffect(() => {
+    let intervalId;
+    if(timeLeft) {
+      intervalId = setInterval(() => {
+        console.log("start count down", timeLeft, intervalId)
+        setTimeLeft(timeLeft => timeLeft - 1); 
+      }, 1000);
+    }
+
+    if (timeLeft == 0) {
       clearInterval(qrFetchIntervalID);
+      setShowSessionInformation(true)
       return;
     }
 
-    // save intervalId to clear the interval when the component re-renders
-    const intervalId = setInterval(() => {
-      setTimeLeft(timeLeft - 1);
-    }, 1000);
-
     // clear interval on re-render to avoid memory leaks
-    return () => clearInterval(intervalId);
+    return () => {
+      clearInterval(intervalId);
+    }
   }, [timeLeft]);
-
- 
-
-  const handleDialogOpen = () => {
-    setOpenDialog(true);
-  };
 
   const handleDialogClose = () => {
     setOpenDialog(false);
     const totalSeconds = (parseInt(minutesInput) || 0) * 60 + (parseInt(secondsInput) || 0);
     setTimeLeft(totalSeconds); // Set the total time in seconds
+    setStartCountDown(true)
   };
 
   // Convert time for display
@@ -83,7 +87,7 @@ const QRScreen = ({ selectedSection }) => {
   const seconds = timeLeft % 60;
   
   if (showSessionInformation) {
-    return <SessionInformation />;
+    return <SessionInformation role={role} userId={userId} courseId={courseId}/>;
   }
 
   return (
@@ -136,7 +140,8 @@ const QRScreen = ({ selectedSection }) => {
             <Typography variant="body1" sx={{ marginBottom: '2%' }}>
               <span style={{fontWeight: "bold"}}>Scan the attached QR Code</span> to check your attendance of today class:
             </Typography>
-            <span style={{fontWeight: "bold", variant: "body1"}}>{selectedSection.section_name}</span>
+            <div style={{fontWeight: "bold", variant: "body1"}}>{courseName}</div>
+            <div style={{fontWeight: "bold", variant: "body1"}}>{selectedSection}</div>
             <div style={{variant: "body1"}}>Date: <span style={{fontWeight: "bold"}}>{getDateString()}</span></div>
             <Box sx={{ alignItems: 'center', mt: "2%", alignContent: "center"}}>
             <Typography variant="body1" textAlign="left" sx={{ marginBottom: '4%' }} component="span">

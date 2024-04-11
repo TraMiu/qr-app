@@ -23,6 +23,7 @@ const SessionInformation = ({role, userId, courseId}) => {
   useEffect(() => {
     const fetchSections = async () => {
         try {
+            console.log("fetchSections API called")
             console.log("UserId", userId);
             console.log("CourseId", courseId);
             const response = await axios.get(GET_SECTION_API);
@@ -55,10 +56,11 @@ const SessionInformation = ({role, userId, courseId}) => {
 
   
   if (showQRScreen) {
-    return <QRScreen selectedSection={selectedSection}/>; // Replace this with the actual QR Screen component you have
+    return <QRScreen courseName = {className} selectedSection={selectedSection} role={role} userId={userId} courseId={courseId}/>; // Replace this with the actual QR Screen component you have
   }
 
   const handleSectionChange = (newSection) => {
+    console.log("section changed", newSection);
     setSelectedSection(newSection);
   };
 
@@ -70,7 +72,7 @@ const SessionInformation = ({role, userId, courseId}) => {
     return `${day}-${month}-${year}`;
   }
 
-  
+
   return (
     <Box sx={{padding: "5.5%"}}>
       <div className="session-info-container">

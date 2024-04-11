@@ -7,12 +7,12 @@ import SessionInformation from "./screens/start-session";
 import StudentRecords from "./screens/student-records";
 import QRScreen from "./screens/qr-checkin";
 import QRScanScreen from "./screens/qr-scanning";
-
+import { useState } from "react";
 
 
 function App({role, userId, courseId}) {
-  
-  const teacherRole = (role == "Instructor"); 
+ 
+  const teacherRole = (role == "Teacher"); 
   const selectedSectionTest = {
     "section_name": "Section 1",
     "id": 1
