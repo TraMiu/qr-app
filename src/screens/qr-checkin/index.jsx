@@ -4,6 +4,7 @@ import Title from '../global/Title';
 import SessionInformation from '../start-session';
 import axios from 'axios';
 import "../qr-checkin/test1.css"
+import { fetchQR } from '../../api';
 
 
 const QRScreen = ({ courseName, selectedSection, role, userId, courseId}) => {
@@ -29,9 +30,9 @@ const QRScreen = ({ courseName, selectedSection, role, userId, courseId}) => {
     return `${day}/${month}/${year}`;
   }
 
-  const fetchQR = async () => {
+  const getQRData = async () => {
     try {
-      const response = await axios.get(GET_QR_API);
+      const response = await fetchQR();
       const data = response.data;
       const newImageUrl = data.flatMap(data => data.imageUrl);
       console.log("imageUrl", newImageUrl);
@@ -45,7 +46,7 @@ const QRScreen = ({ courseName, selectedSection, role, userId, courseId}) => {
     let intervalId;
     if(startCountDown){
       console.log("start fetching", startCountDown)
-      intervalId = setInterval(fetchQR, refreshTime);
+      intervalId = setInterval(getQRData, refreshTime);
       setQrFetchIntervalID(intervalId);
     }
 
