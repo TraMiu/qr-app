@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Box, Button, Typography, Paper, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from '@mui/material';
 import Title from '../global/Title';
 import SessionInformation from '../start-session';
-import axios from 'axios';
 import "../qr-checkin/test1.css"
 import { fetchQR } from '../../api';
 
 
 const QRScreen = ({ courseName, selectedSection, role, userId, courseId}) => {
-  const GET_QR_API = 'http://localhost:3003/qrsessions'
-  // const GET_QR_API = '/qrsessions'
+
   const DEFAULT_REFRESH_TIME = 5;
   const [showSessionInformation, setShowSessionInformation] = useState(false);
   const [openDialog, setOpenDialog] = useState(true); // State to control the dialog
@@ -31,15 +29,11 @@ const QRScreen = ({ courseName, selectedSection, role, userId, courseId}) => {
   }
 
   const getQRData = async () => {
-    try {
-      const response = await fetchQR();
-      const data = response.data;
-      const newImageUrl = data.flatMap(data => data.imageUrl);
-      console.log("imageUrl", newImageUrl);
-      setImageUrl(newImageUrl);      
-    } catch (error) {
-      console.error('Error fetching data: ', error);
-    }
+    const response = await fetchQR();
+    const data = response.data;
+    const newImageUrl = data.flatMap(data => data.imageUrl);
+    console.log("imageUrl", newImageUrl);
+    setImageUrl(newImageUrl);      
   };
 
   useEffect(() => {

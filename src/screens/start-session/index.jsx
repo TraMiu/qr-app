@@ -3,54 +3,45 @@ import "./style.css";
 import Title from '../global/Title';
 import SectionPicker from '../global/SectionPicker';
 import { Box, Button } from '@mui/material';
-import QRDatePicker from '../global/QRDatePicker';
 import QRScreen from '../qr-checkin';
 import { useEffect } from 'react';
-import axios from 'axios';
-import dayjs from 'dayjs';
+import { fetchSections } from '../../api';
 
 
 
 const SessionInformation = ({role, userId, courseId}) => {
-  const GET_SECTION_API = `http://localhost:3002/api`
-  // const GET_SECTION_API = `/api/courses/${courseId}/sections/`  // Uncomment this when run BE
-
+  
   const [sections, setSections] = useState([]);
   const [selectedSection, setSelectedSection] = useState('');
   const [showQRScreen, setShowQRScreen] = useState(false); // State to control screen display
   const [className, setClassName] = useState("");
 
   useEffect(() => {
-    const fetchSections = async () => {
-        try {
-            console.log("fetchSections API called")
-            console.log("UserId", userId);
-            console.log("CourseId", courseId);
-            const response = await axios.get(GET_SECTION_API);
-            const data = response.data
-            const className = data.course_name;
-            const availableSections = data.section_list;
-            const sectionNames = availableSections.map(section => section.section_name)
-            
-            console.log("section IDs", availableSections.map(section => section.id))
-            console.log("data", data);
-            console.log("class_name", className);
-            if (availableSections.length > 0) {
-                setSections(sectionNames);
-                setSelectedSection(availableSections[0]); // Set the first course as the selected section
-                setClassName(className);
-                console.log(selectedSection)
-            } else {
-                setSections(["No section available"]);
-                setSelectedSection(""); // Reset or set to a default value
-            }         
-          
-        } catch (error) {
-            console.error('Error fetching data: ', error);
-        }
+    const getSectionsData = async () => {
+      console.log("fetchSections API called")
+      console.log("UserId", userId);
+      console.log("CourseId", courseId);
+      const response = await fetchSections(courseId);
+      const data = response.data
+      const className = data.course_name;
+      const availableSections = data.section_list;
+      const sectionNames = availableSections.map(section => section.section_name)
+      
+      console.log("section IDs", availableSections.map(section => section.id))
+      console.log("data", data);
+      console.log("class_name", className);
+      if (availableSections.length > 0) {
+          setSections(sectionNames);
+          setSelectedSection(availableSections[0]); // Set the first course as the selected section
+          setClassName(className);
+          console.log(selectedSection)
+      } else {
+          setSections(["No section available"]);
+          setSelectedSection(""); // Reset or set to a default value
+      }         
     };
   
-    fetchSections();
+    getSectionsData();
   }, []);
 
 
