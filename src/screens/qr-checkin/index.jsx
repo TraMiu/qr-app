@@ -74,7 +74,7 @@ const QRScreen = ({ courseName, selectedSection, role, userId, courseId}) => {
     setOpenDialog(false);
     const totalSeconds = (parseInt(minutesInput) || 0) * 60 + (parseInt(secondsInput) || 0);
     setTimeLeft(totalSeconds); // Set the total time in seconds
-    setStartCountDown(true)
+    // setStartCountDown(true)
   };
 
   // Convert time for display
