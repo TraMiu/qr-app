@@ -218,7 +218,8 @@ const AttendanceCheck = ({role, userId, courseId}) => {
     useEffect(() => {
         const getDatesData = async () => {
             if (selectedSection) {
-                const response = await fetchDates(courseId, getSectionId(selectedSection));
+                const selectedSectionId = getSectionId(selectedSection);
+                const response = await fetchDates(courseId, selectedSectionId);
                 const data = response.data;
                 const availableDates = data.dates;
 

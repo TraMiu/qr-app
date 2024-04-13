@@ -73,13 +73,26 @@ export const putStatus = async (studentId, updatedStatus) => {
 }
 
 
-const GET_STUDENT_RECORD_API = 'http://localhost:3005/api'
+const GET_STUDENT_RECORD_API = 'http://localhost:3005/records'
 // API for student-records screen
-export const fetchRecords = async () => {
+export const fetchRecords = async (userId, courseId) => {
   try {
-    // const GET_STUDENT_RECORD_API = // Please fill in the right format for this
+    // const GET_STUDENT_RECORD_API = `/api/courses/${courseId}/students/${userId}/records`
 
     const response = await axios.get(GET_STUDENT_RECORD_API);
+    return response;
+  } catch (error) {
+    console.error('Error putting data: ', error);
+  }
+}
+
+
+const GET_STUDENT_AVG_API = 'http://localhost:3005/avg'
+// API for student-records screen
+export const fetchAvg = async (userId, courseId) => {
+  try {
+    // const GET_STUDENT_RECORD_API = `/api/courses/${courseId}/students/${userId}/avg`
+    const response = await axios.get(GET_STUDENT_AVG_API);
     return response;
   } catch (error) {
     console.error('Error putting data: ', error);

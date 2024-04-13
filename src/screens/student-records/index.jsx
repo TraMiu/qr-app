@@ -6,6 +6,7 @@ import Divider from '@mui/material/Divider';
 import "./style.css";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { fetchAvg, fetchRecords } from '../../api';
 
 function getDayOfWeek(inputDate) {
     const dateParts = inputDate.split('-');
@@ -83,9 +84,23 @@ function Chart({summary}) {
 
 
 
-function AttendanceSummary({summary}) {
+function AttendanceSummary({summary, userId, courseId}) {
 
     const data = summary;
+    const [avg, setAvg] = useState();
+    useEffect(() => {
+        const getAvgData = async () => {
+            try {
+                const response = await fetchAvg(userId, courseId);
+                console.log(response.data)
+                setAvg(response.data);
+            } catch (error) {
+                console.error('Error fetching data: ', error);
+            }
+        };
+
+        getAvgData();
+    }, []);
 
     return (
         <Box 
@@ -111,7 +126,8 @@ function AttendanceSummary({summary}) {
             </Box>
 
             <Box>
-                <Typography variant="h1" align="left" fontWeight="bold">{getCurrentAttendance(Object.values(data))}%</Typography>
+                {/* <Typography variant="h1" align="left" fontWeight="bold">{getCurrentAttendance(Object.values(data))}%</Typography> */}
+                <Typography variant="h1" align="left" fontWeight="bold">{avg}%</Typography>
                 <Typography variant="h5" align="left">Current Attendance</Typography>
             </Box>
 
@@ -121,16 +137,17 @@ function AttendanceSummary({summary}) {
 }
 
 
-function Row({records, index}) {
+function Row({records, index, record}) {
     const data = records[index];
-
+    console.log(record, index, data, "record and index")
+    console.log("Logging records", record)
     let statusColor;
 
-    if (data.status === "Absent") {
+    if (record.status === "Absent") {
         statusColor = '#E30000'; // Red for 'Absent'
-    } else if (data.status === "Late") {
+    } else if (record.status === "Late") {
         statusColor = '#FDAF06'; // Green for 'Present'
-    } else if (data.status === "Present") {
+    } else if (record.status === "Present") {
         statusColor = '#29F527'; // Orange for 'Late'
     }
 
@@ -148,17 +165,17 @@ function Row({records, index}) {
                 ent="span" sx={{ color: statusColor, marginRight: "0.5rem"}}>●</Typography>
               
                 <Box sx={{width: "20%"}}>
-                    <Typography variant="h5">{formatDate(data.date)}</Typography>
+                    <Typography variant="h5">{formatDate(record.date)}</Typography>
                 </Box>
                 <Box sx={{width: "20%"}}>
-                    <Typography variant="h5">{getDayOfWeek(data.date)}</Typography>
+                    <Typography variant="h5">{getDayOfWeek(record.date)}</Typography>
                 </Box>
                 <Box sx={{width: "20%"}}>
-                    <Typography variant="h5">{data.status}</Typography>
+                    <Typography variant="h5">{record.status}</Typography>
                 </Box>
-                <Box sx={{width: "20%"}}>
+                {/* <Box sx={{width: "20%"}}>
                     <Typography variant="h5">{calculateRollingAttendance(index)}</Typography>
-                </Box>
+                </Box> */}
                 
             </Box>
             <Divider sx={{ borderBottomWidth: 3 }}/>
@@ -169,8 +186,8 @@ function Row({records, index}) {
 
 function AttendanceList({attendanceRecords}) {
 
-    const listItems = attendanceRecords.map((index) =>
-        <Row index={index} records={attendanceRecords} />
+    const listItems = attendanceRecords.map((record, index) =>
+        <Row index={index} records={attendanceRecords} record={record} />
     );
     
     return (
@@ -186,16 +203,17 @@ export default function StudentRecords({role, userId, courseId}) {
     const [attendanceRecords, setAttendanceRecords] = useState([]);
 
     useEffect(() => {
-        const fetchRecords = async () => {
+        const getRecordsData = async () => {
             try {
-                const response = await axios.get('http://localhost:3005/api');
+                const response = await fetchRecords(userId, courseId);
+                console.log(response.data)
                 setAttendanceRecords(response.data);
             } catch (error) {
                 console.error('Error fetching data: ', error);
             }
         };
 
-        fetchRecords();
+        getRecordsData();
     }, []);
 
     
@@ -220,7 +238,7 @@ export default function StudentRecords({role, userId, courseId}) {
 
     return (
         <Box>
-            <AttendanceSummary summary={summary}/>
+            <AttendanceSummary summary={summary} userId={userId} courseId={courseId}/>
             <AttendanceList attendanceRecords={attendanceRecords}/>
         </Box>
     );
